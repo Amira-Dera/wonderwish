@@ -1,0 +1,53 @@
+/* Shop by World only: native block content, no commerce or hero overrides. */
+.ww-worlds { background:#fafcfc; position:relative; isolation:isolate; color:#17222b; padding:clamp(64px,8vw,112px) clamp(20px,4vw,64px); margin-block-start:0; }
+.ww-worlds-intro,.ww-world-grid { max-width:1280px; margin-inline:auto; }
+.ww-worlds-intro { text-align:center; margin-bottom:48px; }
+.ww-worlds-eyebrow { font-size:11px; font-weight:700; letter-spacing:.2em; color:#52636b; }
+.ww-worlds-title { font-size:clamp(38px,5vw,64px); font-weight:750; letter-spacing:-.055em; line-height:1.08; margin-block:16px; }
+.ww-worlds-description { font-size:17px; color:#58666e; margin-block:0; }
+.ww-world-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; }
+.ww-world-card { --light:#2689b5; position:relative; isolation:isolate; min-height:590px; overflow:hidden; border-radius:28px; color:#17222b; margin:0; background:#fff; border:1px solid #dce4e8; box-shadow:none; transition:transform .35s,box-shadow .35s; }
+.ww-world-dreamworks { --light:#678b59; background:#fff; border-color:#dfe5dc; }
+.ww-world-art { height:385px; display:grid; place-items:center; margin:0; position:relative; }
+ .ww-world-character { position:relative; margin:0; height:100%; width:100%; display:flex; align-items:center; justify-content:center; animation:ww-world-float 6s ease-in-out 3; }
+.ww-world-character img { display:block; width:auto; height:auto; max-height:340px; max-width:85%; object-fit:contain; filter:none; mix-blend-mode:multiply; }
+.ww-world-dreamworks .ww-world-character { animation-delay:-2s; }
+.ww-world-license { max-width:950px; margin:28px auto 0; font-size:11px; line-height:1.6; text-align:center; color:#647078; }
+.ww-world-license a { color:inherit; text-underline-offset:3px; }
+
+.ww-world-copy { position:relative; z-index:1; padding:0 36px 36px; margin:0; }
+.ww-world-kicker { font-size:12px; letter-spacing:.04em; color:#52636b; margin:0 0 12px; }
+.ww-world-name { font-size:clamp(38px,4vw,56px); font-weight:750; letter-spacing:-.045em; line-height:1.05; margin:0; }
+.ww-world-mood { font-size:14px; margin:14px 0 24px; color:#52636b; }
+.ww-world-actions { margin:0; }
+.ww-world-actions .wp-block-button { width:100%; }
+.ww-world-actions .wp-block-button__link { display:flex; justify-content:space-between; align-items:center; width:100%; box-sizing:border-box; background:#fff; color:#153d55; border:1px solid #d7e3e8; border-radius:100px; padding:15px 22px; font-size:14px; font-weight:650; text-decoration:none; transition:background .25s,transform .25s; }
+.ww-world-dreamworks .wp-block-button__link { color:#174c3e; }
+.ww-world-actions a:focus-visible { outline:3px solid var(--light); outline-offset:5px; }
+@media(hover:hover) { .ww-world-card:hover { transform:translateY(-5px); box-shadow:none; } .ww-world-actions a:hover { background:#eefaff; transform:translateY(-2px); } }
+@keyframes ww-world-float { 0%,100% {transform:translateY(0)} 50% {transform:translateY(-8px)} }
+@keyframes ww-world-sparkles { 0%,100% {transform:translateY(0);opacity:.35} 50% {transform:translateY(-14px);opacity:.8} }
+@media(max-width:700px) { .ww-world-grid {grid-template-columns:1fr;gap:24px} .ww-worlds-intro {margin-bottom:32px} .ww-world-card {min-height:540px;border-radius:24px} .ww-world-art {height:325px} .ww-world-character img {max-height:285px;max-width:90%} .ww-world-copy {padding:0 26px 28px} }
+@media(prefers-reduced-motion:reduce) { .ww-worlds *, .ww-worlds *::before, .ww-worlds *::after {animation:none!important;transition:none!important} }
+
+/* Higher-resolution sources contain no greeting text and need no mask. */
+.ww-world-disney .ww-world-character img { width:240px; }
+.ww-world-dreamworks .ww-world-character img { width:264px; }
+.ww-world-character { animation:none; }
+
+.ww-world-name { height:70px; display:flex; align-items:center; justify-content:center; margin:0 0 16px; }
+.ww-world-name img { display:block; width:210px; height:65px; object-fit:contain; }
+.ww-world-dreamworks .ww-world-name img { width:265px; height:auto; max-width:100%; }
+.ww-world-copy {text-align:center;}
+.ww-world-glitter {position:absolute;inset:0;pointer-events:none;z-index:3;overflow:hidden;}
+.ww-world-canvas {position:absolute;inset:0;width:100%;height:100%;}
+.ww-world-glitter span {position:absolute;color:#459bc0;font-size:16px;opacity:.45;}
+.ww-world-glitter span:nth-of-type(1) {left:4%;top:15%;}
+.ww-world-glitter span:nth-of-type(2) {left:15%;top:6%;color:#5caa85;font-size:12px;}
+.ww-world-glitter span:nth-of-type(3) {right:8%;top:18%;color:#5caa85;}
+.ww-world-glitter span:nth-of-type(4) {left:1.5%;top:68%;font-size:12px;}
+.ww-world-glitter span:nth-of-type(5) {right:1.5%;top:72%;color:#5caa85;font-size:13px;}
+.ww-world-glitter span:nth-of-type(6) {right:22%;bottom:5%;font-size:10px;}
+@media(prefers-reduced-motion:reduce) {.ww-world-canvas {display:none;}}
+/* Hide the thin encoded edge on Po's animated source without changing its pose. */
+.ww-world-dreamworks .ww-world-character img {clip-path:inset(3px 0 0);border:0;box-shadow:none;}

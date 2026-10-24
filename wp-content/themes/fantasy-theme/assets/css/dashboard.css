@@ -1,0 +1,100 @@
+.ww-account-page main {max-width:none!important;margin-block-start:0!important;background:radial-gradient(ellipse at 0 0,#dcefff90,transparent 45%),linear-gradient(#f1f8ff,#fff);color:#1c3e60;}
+.ww-account-page main>.wp-block-group {padding:36px clamp(20px,4vw,60px) 64px!important;}
+.ww-account-page .entry-content {max-width:1160px!important;margin-inline:auto;}
+.ww-account-home .wp-block-post-title {display:none;}
+.ww-account-page .woocommerce-MyAccount-navigation {float:none!important;width:100%!important;margin:0 0 30px;}
+.ww-account-page .woocommerce-MyAccount-navigation ul {display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0;}
+.ww-account-page .woocommerce-MyAccount-navigation li {margin:0;padding:0;}
+.ww-account-page .woocommerce-MyAccount-navigation a {display:block;font-size:11px;padding:9px 14px;border:1px solid #d7e6f3;border-radius:30px;text-decoration:none;color:#506f8d;background:#ffffffb8;}
+.ww-account-page .woocommerce-MyAccount-navigation .is-active a {background:#225f99;color:#fff;border-color:#225f99;}
+.ww-account-page .woocommerce-MyAccount-content {float:none!important;width:100%!important;}
+.ww-customer-welcome {display:grid;grid-template-columns:1.3fr .7fr;align-items:center;min-height:240px;padding:32px 42px;border:1px solid #d9e9f7;border-radius:26px;background:radial-gradient(ellipse at 90% 0,#fff,transparent 65%),#e8f4ff;overflow:hidden;}
+.ww-customer-eyebrow {font-size:10px;letter-spacing:.2em;color:#6a91b1;font-weight:650;margin:0 0 16px;}
+.ww-customer-intro h1 {font-size:clamp(29px,3.6vw,46px);letter-spacing:-.045em;line-height:1.12;margin:0 0 18px;color:#1f4165;overflow-wrap:anywhere;}
+.ww-customer-intro>p:not(.ww-customer-eyebrow) {font-size:14px;line-height:1.8;color:#647f98;max-width:470px;margin:0 0 22px;}
+.ww-customer-shop {display:inline-flex;gap:25px;font-size:12px;color:#2367a2;text-underline-offset:5px;}
+.ww-customer-character {position:relative;max-width:260px;margin:auto;}
+.ww-customer-character img {display:block;width:100%;height:210px;object-fit:contain;animation:ww-dumbo-float 7s ease-in-out 2;}
+.ww-customer-character>span {position:absolute;color:#80b4dc;font-size:25px;top:10px;left:0;}.ww-customer-character>span:last-child {left:auto;right:0;top:auto;bottom:25px;font-size:16px;}
+.ww-customer-cards {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px;margin:24px 0 35px;}
+.ww-customer-card {position:relative;display:block;box-sizing:border-box;padding:24px 18px 30px;background:#fff;border:1px solid #dce8f3;border-radius:18px;color:#244d74;text-decoration:none;transition:translate .25s,border-color .25s,box-shadow .25s;}
+.ww-customer-card svg {width:29px;height:29px;color:#5992c0;margin-bottom:15px;}
+.ww-customer-card h2 {font-size:16px;line-height:1.3;letter-spacing:-.02em;margin:0 0 9px;}
+.ww-customer-card p {font-size:11px;line-height:1.75;margin:0;color:#6f8599;}
+.ww-customer-arrow {position:absolute;top:23px;right:17px;font-size:14px;color:#97b4ce;}
+.ww-customer-orders {border:1px solid #dce8f3;border-radius:22px;background:white;padding:28px;}
+.ww-customer-orders-heading {display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:25px;}
+.ww-customer-orders-heading h2 {font-size:23px;letter-spacing:-.035em;margin:0;}.ww-customer-orders-heading>a {font-size:11px;color:#3975a7;text-underline-offset:4px;}
+.ww-customer-empty {text-align:center;padding:25px 20px 32px;background:#f7fbff;border-radius:15px;}
+.ww-customer-empty>span {font-size:28px;color:#8abbdc;}.ww-customer-empty h3 {font-size:20px;letter-spacing:-.025em;margin:13px 0;}.ww-customer-empty p {font-size:12px;line-height:1.8;color:#73879a;margin:0 0 22px;}.ww-customer-empty a {display:inline-block;border-radius:30px;background:#28669e;color:#fff;padding:12px 21px;font-size:12px;text-decoration:none;}
+.ww-customer-table-scroll {overflow-x:auto;}.ww-customer-table-scroll table {width:100%;border-collapse:collapse;font-size:12px;white-space:nowrap;}.ww-customer-table-scroll th,.ww-customer-table-scroll td {text-align:left;padding:16px 12px;border-bottom:1px solid #e5eef5;}.ww-customer-table-scroll a {color:#27679f;text-underline-offset:4px;}.ww-order-status {display:inline-block;background:#edf5fc;border-radius:20px;padding:5px 10px;color:#46749c;font-size:11px;}
+.ww-customer-art-credit {font-size:9px;line-height:1.7;color:#7f91a1;margin:22px 0 0;}.ww-customer-art-credit a {color:inherit;}
+.ww-account-page main a:focus-visible,.ww-account-page main button:focus-visible,.ww-account-page main input:focus-visible,.ww-customer-table-scroll:focus-visible {outline:3px solid #619bd0;outline-offset:4px;}
+@media(hover:hover) {.ww-customer-card:hover {translate:0 -4px;border-color:#8bb9dd;box-shadow:0 9px 20px #306b9910;}.ww-account-page .woocommerce-MyAccount-navigation a:hover {border-color:#8bb9dd;}}
+@keyframes ww-dumbo-float {0%,100%{translate:0 0;}50%{translate:0 -7px;}}
+@media(max-width:1000px) {.ww-customer-cards {grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:650px) {.ww-customer-welcome {grid-template-columns:1fr;padding:28px 24px;}.ww-customer-character {margin:16px auto 0;}.ww-customer-character img {height:160px;}.ww-customer-cards {grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}.ww-customer-orders {padding:20px;}.ww-customer-orders-heading {align-items:flex-start;flex-direction:column;gap:10px;}.ww-account-page main>.wp-block-group {padding:24px 20px 40px!important;}}
+@media(max-width:380px) {.ww-customer-cards {grid-template-columns:1fr;}}
+@media(prefers-reduced-motion:reduce) {.ww-customer-character img {animation:none;}.ww-customer-card {transition:none;}.ww-customer-card:hover {translate:none;}}
+
+.ww-customer-dashboard {position:relative;isolation:isolate;}
+.ww-dashboard-glitter {position:absolute;inset:0;z-index:3;pointer-events:none;overflow:hidden;}
+.ww-dashboard-glitter canvas {display:block;width:100%;height:100%;}
+.ww-customer-character>span {animation:ww-customer-twinkle 5s ease-in-out 3;}
+@keyframes ww-customer-twinkle {0%,100%{opacity:.4;}50%{opacity:1;}}
+@media(prefers-reduced-motion:reduce) {.ww-customer-character>span {animation:none;}}
+.ww-account-page .entry-content {padding-inline:0!important;}
+/* Shared inner pages: native WooCommerce forms and TI wishlist, card navigation only. */
+.ww-account-page .wp-block-post-title {display:none;}
+.ww-account-page .entry-content>.ww-customer-cards {margin-top:0;}
+.ww-account-page .woocommerce>.ww-customer-cards {margin-top:0;}
+.ww-account-inner-heading {position:relative;padding:27px 32px;margin:0 0 24px;border:1px solid #d7e8f6;border-radius:23px;background:radial-gradient(ellipse at 95% 10%,#fff,transparent 70%),#eaf5ff;}
+.ww-account-inner-heading>a {display:inline-block;font-size:11px;color:#4b7da6;text-underline-offset:4px;margin-bottom:19px;}
+.ww-account-inner-heading h1 {font-size:clamp(28px,3vw,39px);letter-spacing:-.04em;line-height:1.2;margin:0 0 12px;color:#254866;}
+.ww-account-inner-heading p {font-size:13px;line-height:1.8;color:#668099;margin:0;max-width:650px;}
+.ww-account-inner-heading>span {position:absolute;right:30px;top:30px;color:#8bbbdc;font-size:24px;}
+.ww-account-inner-panel {padding:30px;border-radius:22px;border:1px solid #dae8f3;background:#fff;color:#355675;font-size:14px;line-height:1.8;overflow-wrap:anywhere;}
+.ww-account-inner-panel:empty {display:none;}
+.ww-account-inner-panel a {color:#2c6b9e;text-underline-offset:4px;}
+.ww-account-inner-panel h2 {font-size:23px;letter-spacing:-.025em;line-height:1.3;margin:0 0 20px;}
+.ww-account-inner-panel h3 {font-size:19px;letter-spacing:-.02em;}
+.ww-account-inner-panel .woocommerce-info,.ww-account-inner-panel .woocommerce-message,.ww-account-inner-panel .woocommerce-error {background:#f0f7fd;border-radius:12px;border-top:0;border-left:3px solid #78a9cf;padding:20px 20px 20px 45px;color:#416786;font-size:13px;}
+.ww-account-inner-panel .woocommerce-info::before,.ww-account-inner-panel .woocommerce-message::before {color:#699fc8;top:22px;left:18px;}
+.ww-account-inner-panel .woocommerce-info a.button {float:none;display:inline-block;margin:10px 0 0 12px;}
+.ww-account-inner-panel button.button,.ww-account-inner-panel a.button,.ww-account-inner-panel input.button,.ww-wishlist-panel .tinvwl-to-right button {background:#28679f!important;color:#fff!important;border:0!important;border-radius:30px!important;font-size:12px!important;line-height:1.5;padding:12px 21px!important;box-shadow:none!important;}
+.ww-account-inner-panel .woocommerce-Addresses {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+.ww-account-inner-panel .woocommerce-Addresses>div {float:none!important;width:auto!important;border:1px solid #e0ebf5;border-radius:16px;padding:22px;background:#f8fbff;}
+.ww-account-inner-panel .woocommerce-Address-title {display:flex;align-items:baseline;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:17px;}
+.ww-account-inner-panel .woocommerce-Address-title h2 {font-size:19px;margin:0;}.ww-account-inner-panel address {font-style:normal;font-size:13px;color:#6b8195;line-height:1.9;}
+.ww-account-inner-panel form .form-row {padding:0;margin:0 0 20px;}
+.ww-account-inner-panel form label {font-size:12px;font-weight:550;color:#466884;line-height:1.9;}
+.ww-account-inner-panel form input.input-text,.ww-account-inner-panel form select,.ww-account-inner-panel form textarea {box-sizing:border-box;max-width:100%;min-height:46px;padding:11px 13px;border:1px solid #cbddeb;border-radius:10px;color:#285275;background:#fbfdff;font:inherit;font-size:14px;}
+.ww-account-inner-panel .select2-container .select2-selection--single {height:46px;border:1px solid #cbddeb;border-radius:10px;background:#fbfdff;}.ww-account-inner-panel .select2-selection__rendered {line-height:44px!important;}.ww-account-inner-panel .select2-selection__arrow {top:9px!important;}
+.ww-account-inner-panel fieldset {border:1px solid #dce8f3;border-radius:15px;padding:22px;margin:28px 0;}.ww-account-inner-panel legend {font-size:15px;font-weight:650;color:#4a7292;padding:0 8px;}.ww-account-inner-panel em {font-size:11px;color:#748ba0;}
+.ww-account-inner-panel table.shop_table,.ww-wishlist-panel table {width:100%;border:1px solid #e0eaf3;border-radius:12px;font-size:12px;border-spacing:0;}
+.ww-account-inner-panel table th {font-size:11px;font-weight:650;color:#446c8e;background:#f3f8fd;}.ww-account-inner-panel table td,.ww-account-inner-panel table th {padding:15px 13px;}
+.ww-account-inner-panel table a {color:#286a9f;}
+.ww-wishlist-panel .tinv-header {display:none;}
+.ww-wishlist-panel .tinv-wishlist {margin:0;max-width:100%;}
+.ww-wishlist-panel .wishlist-empty {padding:35px 20px;text-align:center;border-radius:15px;background:#f5faff;color:#6a8197;}
+.ww-wishlist-panel .return-to-shop {text-align:center;margin:23px 0 10px;}
+.ww-wishlist-panel .tinvwl-table-manage-list {margin-bottom:0;}
+.ww-wishlist-panel img {max-width:100%;height:auto;}
+.ww-customer-card[aria-current=page] {border-color:#7baed5;background:#eff7ff;}
+.ww-page-glitter {position:fixed;inset:0;width:100vw;height:100vh;z-index:99999;pointer-events:none;}
+@media(max-width:650px) {.ww-account-inner-heading {padding:24px;}.ww-account-inner-heading>span {right:20px;top:22px;font-size:17px;}.ww-account-inner-panel {padding:20px;}.ww-account-inner-panel .woocommerce-Addresses {grid-template-columns:1fr;}.ww-account-inner-panel form .form-row-first,.ww-account-inner-panel form .form-row-last {float:none!important;width:100%!important;}.ww-account-inner-panel fieldset {padding:15px;}.ww-account-inner-panel .woocommerce-info a.button {margin-left:0;}.ww-wishlist-panel {padding:18px 14px;}}
+.ww-wishlist-page .entry-content>.ww-customer-cards,.ww-wishlist-page .entry-content>.ww-account-inner-heading,.ww-wishlist-page .entry-content>.ww-account-inner-panel {max-width:none!important;width:100%;margin-inline:0;box-sizing:border-box;}
+.ww-account-inner-panel .woocommerce-Addresses::before,.ww-account-inner-panel .woocommerce-Addresses::after {display:none!important;}
+
+/* A different Disney/DreamWorks companion in each account heading card. */
+.ww-account-inner-heading.ww-inner-with-character {display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:32px;align-items:center;min-height:190px;}
+.ww-inner-heading-copy>a {display:inline-block;font-size:11px;color:#4b7da6;text-underline-offset:4px;margin-bottom:19px;}
+.ww-account-page .ww-account-inner-heading img.ww-inner-character {display:block;width:180px;height:160px;object-fit:contain;justify-self:center;animation:ww-dumbo-float 7s ease-in-out 2;}
+.ww-inner-with-character>span {right:16px;top:19px;font-size:16px;}
+@media(max-width:650px) {.ww-account-inner-heading.ww-inner-with-character {grid-template-columns:1fr;gap:18px;}.ww-account-page .ww-account-inner-heading img.ww-inner-character {width:155px;height:135px;}}
+@media(prefers-reduced-motion:reduce) {.ww-inner-character {animation:none;}}
+/* Address-card actions and native account notices should be easy to tap. */
+.ww-account-inner-panel .woocommerce-Address-title a.edit {display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:7px 14px;border:1px solid #b8d1e6;border-radius:99px;background:#fff;color:#205e98;font-size:12px;text-decoration:none;}
+.ww-account-inner-panel button.button,.ww-account-inner-panel a.button,.ww-account-inner-panel input.button {min-height:44px;display:inline-flex;align-items:center;justify-content:center;animation:none!important;}
+.ww-account-inner-panel .woocommerce-orders-table__cell-order-actions a.button {margin:3px;}
+.ww-account-inner-panel .woocommerce-pagination {display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;}

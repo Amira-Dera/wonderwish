@@ -1,0 +1,6 @@
+.editor-styles-wrapper .ww-brand-logo {max-width:100%;height:auto;}
+.editor-styles-wrapper .ww-site-brand .ww-brand-logo {width:210px!important;}
+.editor-styles-wrapper .ww-footer-wordmark .ww-brand-logo {width:225px!important;}
+.editor-styles-wrapper .ww-finale-copy,.editor-styles-wrapper .ww-finale-art {opacity:1!important;translate:none!important;}
+.editor-styles-wrapper .ww-product-stream-editor {border:1px dashed #a8c7df;padding:16px;}
+.editor-styles-wrapper .ww-treasure-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));}

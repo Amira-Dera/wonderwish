@@ -1,0 +1,10 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+  "version": 3,
+  "title": "WonderWish Fantasy",
+  "settings": {
+    "custom": {
+      "wonderwish": { "paper": "#FAF9F6", "ink": "#171717", "muted": "#62615E" }
+    }
+  }
+}

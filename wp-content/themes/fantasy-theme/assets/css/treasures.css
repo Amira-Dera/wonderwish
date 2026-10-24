@@ -1,0 +1,101 @@
+/* Scoped featured-products foundation; all content remains native blocks. */
+.ww-treasures {position:relative;isolation:isolate;background:#fffdf9;color:#17222b;padding:clamp(64px,8vw,108px) clamp(20px,4vw,64px);margin-block-start:0;}
+.ww-treasures::before,.ww-treasures::after {content:"";width:16px;height:16px;background:currentColor;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);position:absolute;color:#96cbd1;font-size:20px;pointer-events:none;opacity:.55;}
+.ww-treasures::before {top:8%;left:5%;}.ww-treasures::after {top:13%;right:5%;color:#a5be99;font-size:13px;}
+.ww-treasure-intro {text-align:center;max-width:900px;margin-inline:auto;}
+.ww-treasure-eyebrow {font-size:11px;font-weight:700;letter-spacing:.2em;color:#62777b;}
+.ww-treasure-title {font-size:clamp(35px,4.6vw,58px);font-weight:750;line-height:1.1;letter-spacing:-.05em;margin:16px 0;}
+.ww-treasure-subtitle {font-size:17px;line-height:1.6;color:#637078;margin:0;}
+.ww-treasure-demo-note {max-width:860px;margin:28px auto 36px;text-align:center;font-size:12px;line-height:1.7;color:#657075;}
+.ww-treasure-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px 24px;max-width:1280px;margin:0 auto;}
+.ww-treasure-card {--tint:#f9eae7;--accent:#ba756f;margin:0;min-width:0;}
+.ww-tint-lavender {--tint:#edebf7;--accent:#8474a9;}.ww-tint-ice {--tint:#e8f4f8;--accent:#679eb2;}.ww-tint-peach {--tint:#f9eee0;--accent:#b18c5d;}.ww-tint-sun {--tint:#fbf2d8;--accent:#b9a05a;}.ww-tint-sage {--tint:#eaf0df;--accent:#839963;}.ww-tint-aqua {--tint:#e4f3ee;--accent:#6a9d91;}.ww-tint-pink {--tint:#f5e8f0;--accent:#ad7898;}
+.ww-treasure-picture {position:relative;aspect-ratio:1/1.08;display:grid;place-items:center;overflow:hidden;border-radius:20px;background:transparent;margin:0;transition:background .3s,box-shadow .3s;}
+.ww-treasure-picture::after {display:none;content:"";width:14px;height:14px;background:currentColor;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);position:absolute;right:15px;bottom:12px;color:var(--accent);font-size:24px;opacity:.65;pointer-events:none;}
+.ww-treasure-badge {position:absolute;z-index:1;top:12px;right:12px;left:auto;margin:0;padding:5px 9px;border-radius:30px;background:#fff; border:1px solid #d4dddd;color:#586168;font-size:9px;letter-spacing:.03em;}
+.ww-treasure-image {position:absolute;inset:0;width:100%;height:100%;min-width:0;min-height:0;margin:0;display:flex;align-items:center;justify-content:center;}
+.ww-treasure-image img {display:block;width:80%;height:75%;object-fit:contain;margin-top:16px;transition:transform .45s ease;animation:none;}
+.ww-treasure-card:nth-child(even) img {animation-delay:-3s;}
+.ww-treasure-details {padding:19px 2px 0;margin:0;}
+.ww-treasure-category {font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:#6a7777;margin:0 0 9px;}
+.ww-treasure-name {font-size:16px;font-weight:650;line-height:1.4;letter-spacing:-.015em;margin:0;min-height:45px;}
+.ww-treasure-name a {text-decoration:none;color:inherit;}
+.ww-treasure-price {font-size:16px;font-weight:650;margin:12px 0;}
+.ww-treasure-price span {font-size:10px;font-weight:400;color:#707c81;margin-right:6px;}
+.ww-treasure-link {font-size:11px;font-weight:550;margin:0;}
+.ww-treasure-link a {display:flex;justify-content:space-between;text-decoration:none;color:#346470;border-bottom:1px solid #dbe3e3;padding:0 0 10px;}
+.ww-treasures a:focus-visible {outline:3px solid #4d9bac;outline-offset:4px;border-radius:3px;}
+.ww-treasure-rights {max-width:920px;text-align:center;margin:32px auto 0;color:#798185;font-size:10px;line-height:1.7;}
+.ww-treasure-rights a {color:inherit;}
+.ww-treasure-all {justify-content:center;margin-top:36px;}
+.ww-treasure-all .wp-block-button__link {background:#173f51;color:white;border-radius:100px;padding:16px 28px;font-size:13px;}
+.ww-treasure-all span {margin-left:24px;}
+@media(hover:hover) {.ww-treasure-card:hover img {transform:translateY(-6px) scale(1.035);animation:none;}.ww-treasure-card:hover .ww-treasure-picture {box-shadow:0 12px 28px #263e5510;}.ww-treasure-name a:hover {color:#2b7588;}}
+@keyframes ww-treasure-bob {0%,100% {translate:0 0;}50% {translate:0 -5px;}}
+@media(max-width:1000px) {.ww-treasure-grid {grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:700px) {.ww-treasure-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px;}.ww-treasure-name {font-size:14px;min-height:59px;}.ww-treasure-category {font-size:8px;}.ww-treasure-price {font-size:14px;}.ww-treasure-price span {display:block;margin-bottom:4px;}.ww-treasure-badge {font-size:8px;top:10px;left:10px;}.ww-treasure-subtitle {font-size:15px;}.ww-treasure-link {font-size:10px;}}
+@media(max-width:340px) {.ww-treasure-grid {grid-template-columns:1fr;}.ww-treasure-name {min-height:0;}}
+@media(prefers-reduced-motion:reduce) {.ww-treasures * {animation:none!important;transition:none!important;}}
+
+/* Full-width curved stream; native grid remains the no-JS/reduced-motion fallback. */
+.ww-treasures {--treasure-gutter:clamp(20px,4vw,64px);overflow:clip;background:#fbfcfc;}
+.ww-treasures::before,.ww-treasures::after {display:none;}
+.ww-treasure-card {border:1px solid #d4dfe1;border-radius:20px;background:transparent;overflow:hidden;}
+.ww-treasure-details {padding:16px 18px 20px;}
+.ww-treasure-picture {border-radius:0;aspect-ratio:1/1.02;}
+.ww-treasure-badge a {color:#315864;text-decoration:none;display:block;padding:3px 1px;}
+.ww-treasure-glitter span:nth-of-type(2),.ww-treasure-glitter span:nth-of-type(5) {color:#b084d0;}
+.ww-treasure-glitter span:nth-of-type(3),.ww-treasure-glitter span:nth-of-type(6) {color:#e3b85e;}
+.ww-orbit-controls {display:flex;align-items:center;justify-content:center;gap:18px;margin:0 auto 12px;font-size:11px;color:#65757c;position:relative;z-index:5;}
+.ww-orbit-controls[hidden] {display:none;}
+.ww-orbit-toggle {font:inherit;font-size:12px;background:transparent;color:#204e5e;border:1px solid #cbd9de;border-radius:30px;padding:9px 16px;cursor:pointer;}
+.ww-orbit-toggle:focus-visible {outline:3px solid #499db3;outline-offset:4px;}
+.ww-treasure-grid.is-stream {height:550px;position:relative;display:block;max-width:none;width:calc(100% + var(--treasure-gutter)*2);margin-inline:calc(var(--treasure-gutter)*-1);perspective:1400px;overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 8%,#000 91%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 8%,#000 91%,transparent);}
+.is-stream .ww-treasure-card {position:absolute;left:50%;top:50%;width:240px;margin:0;transform-origin:center;backface-visibility:hidden;background:#fff;will-change:transform;}
+.is-stream .ww-treasure-name {font-size:14px;min-height:40px;}
+.is-stream .ww-treasure-category {font-size:9px;}
+.is-stream .ww-treasure-image img {width:78%;height:72%;}
+.is-stream .ww-treasure-picture {aspect-ratio:1/1;}
+.is-stream .ww-treasure-price {font-size:14px;margin:8px 0;}
+.is-stream .ww-treasure-link {font-size:10px;}
+.is-stream .ww-treasure-badge {font-size:9px;}
+@media(hover:hover) {.is-stream .ww-treasure-card:hover {border-color:#74a9b8;}.ww-treasure-card:hover .ww-treasure-picture {box-shadow:none;}}
+@media(max-width:700px) {.ww-treasure-details {padding:14px 12px 16px;}.ww-treasure-badge {font-size:8px;left:auto;right:7px;top:8px;padding:4px 6px;}}
+
+/* Compact cards: artwork, name and one category CTA. */
+.ww-treasure-card,.is-stream .ww-treasure-card {background:radial-gradient(ellipse at 30% 15%,#ffffffd9,transparent 70%),var(--tint);border-color:color-mix(in srgb,var(--accent) 28%,#e0e6e7);}
+.ww-treasure-picture::after {display:block;right:18px;bottom:18px;opacity:.45;}
+.ww-treasure-details {padding:12px 18px 20px;}
+.ww-treasure-name,.is-stream .ww-treasure-name {min-height:40px;font-size:14px;}
+.ww-treasure-grid.is-stream {height:440px;}
+.ww-treasure-card::after {content:"";position:absolute;pointer-events:none;width:4px;height:4px;border-radius:50%;background:var(--accent);opacity:.3;right:24px;top:30%;box-shadow:-160px 38px 0 var(--accent),-30px 100px 0 #fff,-120px 140px 0 #fff;}
+.ww-treasure-card {position:relative;}
+/* Published catalogue cards share the existing curved stream and static mobile fallback. */
+.ww-treasures .ww-treasure-grid {margin-top:32px;}
+.ww-treasures .ww-treasure-price {font-size:13px;margin:8px 0 0;color:#204e74;}
+.ww-treasures .ww-treasure-price .woocommerce-Price-amount,.ww-treasures .ww-treasure-price .woocommerce-Price-currencySymbol {font:inherit;color:inherit;margin:0;display:inline;}
+.ww-treasures .ww-treasure-image:focus-visible {outline-offset:-7px;}
+/* Treat existing product photos as photography rather than faux-transparent cutouts. */
+.ww-treasures .ww-treasure-picture {background:#fff;}
+.ww-treasures .ww-treasure-image {padding:28px 16px 10px;box-sizing:border-box;}
+.ww-treasures .ww-treasure-image img,.ww-treasures .is-stream .ww-treasure-image img {width:100%;height:100%;object-fit:contain;margin:0;}
+.ww-treasures .ww-treasure-details {background:var(--tint);border-top:1px solid #ffffff80;padding:16px 18px 20px;}
+.ww-treasures .ww-treasure-card::after {display:none;}
+
+/* Roomier stream and a separate category label zone above the photography. */
+.is-stream .ww-treasure-card {width:300px;}
+.ww-treasure-grid.is-stream {height:590px;}
+.ww-treasures .ww-treasure-badge {background:#174d91;border-color:#174d91;color:#fff;top:14px;right:14px;font-size:10px;padding:6px 12px;}
+.ww-treasures .ww-treasure-badge a {color:#fff;}
+.ww-treasures .ww-treasure-image {padding:66px 24px 20px;}
+.ww-treasures .ww-treasure-all .wp-block-button__link {background:#205f9d;color:#fff;}
+.ww-treasures .ww-treasure-all .wp-block-button__link:hover {background:#163f78;}
+@media(max-width:700px){.ww-treasures .ww-treasure-badge {top:10px;right:8px;font-size:8px;padding:4px 8px;}.ww-treasures .ww-treasure-image {padding:48px 12px 12px;}}
+.ww-treasures .ww-treasure-badge {background:#fff;border:1px solid #a9c5df;color:#215b93;}
+.ww-treasures .ww-treasure-badge a {color:#215b93;}
+/* Remove heading-level controls; retain a discreet motion toggle at the lower edge. */
+.ww-treasures .ww-orbit-controls {position:absolute;right:clamp(22px,4vw,64px);bottom:44px;margin:0;gap:0;}
+.ww-orbit-controls>span {display:none;}
+.ww-orbit-toggle {font-size:0;width:38px;height:38px;padding:0;display:grid;place-items:center;color:#205f9d;border-color:#a6c8e5;background:#fff;}
+.ww-orbit-toggle::before {content:'Ⅱ';font-size:17px;line-height:1;}
+.ww-orbit-toggle[aria-pressed="true"]::before {content:'▶';font-size:13px;}

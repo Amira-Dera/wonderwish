@@ -1,0 +1,92 @@
+.ww-benefits {position:relative;margin-block-start:0;padding:clamp(64px,8vw,108px) clamp(20px,4vw,64px);background:#f7faff;color:#182c40;}
+.ww-benefits-eyebrow {margin:0 0 18px;text-align:center;font-size:10px;font-weight:650;letter-spacing:.18em;color:#6384a2;}
+.ww-benefits-title {max-width:850px;margin:0 auto 20px;text-align:center;font-size:clamp(32px,4.3vw,54px);font-weight:750;line-height:1.13;letter-spacing:-.045em;text-wrap:balance;}
+.ww-benefits-intro {margin:0 auto 52px;text-align:center;font-size:16px;line-height:1.7;color:#647b90;}
+.ww-benefits-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;max-width:1160px;margin:auto;}
+.ww-benefit {margin:0;padding:30px 22px 28px;border:1px solid #dce8f5;border-radius:22px;background:#fff;text-align:center;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;}
+.ww-benefit-art {position:relative;display:grid;place-items:center;width:88px;height:88px;margin:0 auto 26px;border-radius:50%;background:#eff6ff;color:#397eb8;}
+.ww-benefit-art svg {width:58px;height:58px;}
+.ww-benefit-spark,.ww-benefit-spark-small {position:absolute;line-height:1;color:#82b5e2;animation:ww-benefit-glimmer 4s ease-in-out 3;}
+.ww-benefit-spark {font-size:20px;top:0;right:-3px;}.ww-benefit-spark-small {font-size:14px;bottom:6px;left:-4px;animation-delay:.7s;}
+.ww-benefit:nth-child(2n) .ww-benefit-spark {animation-delay:1s;}
+.ww-benefit h3 {margin:0 0 14px;font-size:19px;line-height:1.3;font-weight:650;letter-spacing:-.025em;}
+.ww-benefit p {margin:0;font-size:13px;line-height:1.85;color:#62788c;}
+@media(hover:hover) {.ww-benefit:hover {transform:translateY(-5px);border-color:#9fc5e6;box-shadow:0 12px 28px #2d62900a;}}
+@keyframes ww-benefit-glimmer {0%,100%{opacity:.45;transform:scale(.85);}50%{opacity:1;transform:scale(1.12);}}
+@media(max-width:1000px) {.ww-benefits-grid {grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:540px) {.ww-benefits-grid {grid-template-columns:1fr;gap:16px;}.ww-benefit {padding:26px;}.ww-benefits-intro {font-size:14px;margin-bottom:34px;}.ww-benefit-art {margin-bottom:20px;}}
+@media(prefers-reduced-motion:reduce) {.ww-benefit,.ww-benefit-art span {animation:none;transition:none;}.ww-benefit:hover {transform:none;}}
+
+/* Illustrated storybook scenes replace the small utility icons. */
+.ww-benefits {background:#fff;isolation:isolate;overflow:clip;}
+.ww-benefits-grid {gap:28px;}
+.ww-benefit {position:relative;padding:12px 12px 28px;border:0;border-radius:0;background:transparent;}
+.ww-benefit-art {width:100%;height:auto;aspect-ratio:200/180;margin:0 auto 14px;border-radius:0;background:radial-gradient(ellipse at 50% 54%,#e9f4ff 0%,#f4f9ff 40%,transparent 68%);max-width:245px;}
+.ww-benefit-art svg {width:100%;height:auto;overflow:visible;filter:drop-shadow(0 8px 8px #6095c312);transition:transform .5s ease;}
+.ww-benefit-art .ww-benefit-spark {top:20%;right:13%;font-size:24px;color:#73b6e5;}
+.ww-benefit-art .ww-benefit-spark-small {bottom:28%;left:7%;font-size:18px;color:#d7b86b;}
+.ww-benefit h3 {font-size:21px;}
+.ww-benefit p {font-size:13px;max-width:260px;margin-inline:auto;}
+.ww-benefit-lift {transition:transform .5s ease;transform-origin:100px 70px;}
+.ww-benefits-glitter {z-index:-1;}
+.ww-benefits-glitter span:nth-of-type(1) {top:13%;left:8%;}
+.ww-benefits-glitter span:nth-of-type(2) {top:38%;left:3%;}
+.ww-benefits-glitter span:nth-of-type(3) {top:19%;right:9%;}
+.ww-benefits-glitter span:nth-of-type(4) {bottom:15%;right:3%;}
+.ww-benefits-glitter span:nth-of-type(5) {bottom:9%;left:35%;}
+.ww-benefits-glitter span:nth-of-type(6) {top:29%;right:29%;}
+@media(hover:hover) {.ww-benefit:hover {box-shadow:none;transform:none;}.ww-benefit:hover svg {transform:translateY(-7px) rotate(-2deg);}.ww-benefit:hover .ww-benefit-lift {transform:translateY(-9px) rotate(-4deg);}}
+@media(max-width:540px) {.ww-benefits-grid {gap:28px;}.ww-benefit-art {max-width:230px;}.ww-benefit {padding:0 14px 18px;}}
+@media(prefers-reduced-motion:reduce) {.ww-benefit-art svg,.ww-benefit-lift {transition:none;}.ww-benefit:hover svg,.ww-benefit:hover .ww-benefit-lift {transform:none;}}
+
+/* Local character artwork keeps the four benefits in the same illustrated world. */
+.ww-benefit-art img {display:block;width:100%;height:220px;object-fit:contain;transition:transform .5s ease;}
+.ww-benefits-rights {max-width:760px;margin:38px auto 0;text-align:center;color:#7a8b9c;font-size:10px;line-height:1.7;}
+@media(hover:hover) {.ww-benefit:hover img {transform:translateY(-7px) scale(1.04);}}
+@media(prefers-reduced-motion:reduce) {.ww-benefit-art img {transition:none;}.ww-benefit:hover img {transform:none;}}
+
+/* Characters and foreground props form one scene that explains each benefit. */
+.ww-benefit-scene {height:245px;aspect-ratio:auto;max-width:265px;}
+.ww-benefit-scene img {position:absolute;width:72%;height:205px;right:0;top:0;z-index:1;object-position:center bottom;}
+.ww-benefit-scene .ww-benefit-prop {position:absolute;left:-3px;bottom:-3px;width:76%;height:210px;z-index:2;filter:drop-shadow(0 7px 7px #477ca218);}
+.ww-benefit:nth-child(1) .ww-benefit-scene img {right:0;top:-1px;transform:rotate(5deg);}
+.ww-benefit:nth-child(2) .ww-benefit-scene img {right:8px;height:213px;}
+.ww-benefit:nth-child(3) .ww-benefit-scene img {right:-6px;width:78%;top:-8px;}
+.ww-benefit:nth-child(4) .ww-benefit-scene img {right:-8px;height:200px;}
+.ww-benefit-scene .ww-benefit-spark,.ww-benefit-scene .ww-benefit-spark-small {z-index:3;}
+@media(hover:hover) {.ww-benefit:hover .ww-benefit-scene img {transform:translateY(-6px) rotate(3deg);}.ww-benefit:hover .ww-benefit-prop {transform:translateY(-3px) rotate(-2deg);}}
+@media(prefers-reduced-motion:reduce) {.ww-benefit:hover .ww-benefit-scene img,.ww-benefit:hover .ww-benefit-prop {transform:none;}}
+
+/* Compact keepsakes: integrate the character into its prop rather than pair icons. */
+.ww-benefits-grid {gap:36px;}
+.ww-benefit-scene {max-width:175px;height:176px;margin-bottom:22px;background:radial-gradient(ellipse,#eef7ff,transparent 70%);}
+.ww-benefit-scene img {width:112px;height:140px;top:16px;right:23px;object-position:center;}
+.ww-benefit-scene .ww-benefit-prop {inset:0;width:100%;height:100%;filter:none;}
+.ww-scene-keepsake img {width:105px!important;height:117px!important;top:30px!important;right:30px!important;transform:none!important;}
+.ww-scene-present img {height:136px!important;width:100px;top:15px!important;right:25px!important;clip-path:inset(0 0 30px 0);}
+.ww-scene-shopping img {width:135px!important;height:145px!important;top:0!important;right:23px!important;}
+.ww-scene-conversation img {width:99px!important;height:103px!important;top:38px!important;right:38px!important;clip-path:inset(0 round 10px);}
+.ww-benefit h3 {font-size:19px;}
+.ww-benefit-scene .ww-benefit-spark {top:12%;right:10%;font-size:16px;}
+.ww-benefit-scene .ww-benefit-spark-small {bottom:14%;left:10%;font-size:12px;}
+@media(hover:hover) {.ww-benefit:hover .ww-benefit-prop {transform:translateY(-3px);}.ww-benefit:hover .ww-scene-present img {transform:translateY(-5px);}.ww-benefit:hover .ww-scene-shopping img {transform:translateY(-5px) rotate(3deg);}}
+@media(max-width:540px) {.ww-benefits-grid {gap:25px;}.ww-benefit-scene {max-width:155px;height:156px;}.ww-benefit-scene img {scale:.9;transform-origin:center bottom;}}
+@media(prefers-reduced-motion:reduce) {.ww-benefit:hover .ww-benefit-prop,.ww-benefit:hover .ww-benefit-scene img {transform:none;}}
+
+/* Polished spacing and a dimensional open present. */
+.ww-scene-keepsake img {width:82px!important;height:97px!important;top:40px!important;right:45px!important;}
+.ww-scene-present img {width:108px!important;height:143px!important;top:10px!important;right:22px!important;clip-path:inset(0 0 35px 0);}
+/* Props and characters move together so the tail/handle connection stays intact. */
+@media(hover:hover) {
+ .ww-benefit:hover .ww-scene-shopping img,.ww-benefit:hover .ww-scene-shopping .ww-benefit-prop {transform:none;}
+ .ww-benefit:hover .ww-scene-present img,.ww-benefit:hover .ww-scene-present .ww-benefit-prop {transform:none;}
+ .ww-scene-shopping,.ww-scene-present {transition:translate .4s ease;}
+ .ww-benefit:hover .ww-scene-shopping,.ww-benefit:hover .ww-scene-present {translate:0 -4px;}
+}
+@media(max-width:540px) {.ww-benefit-scene {max-width:175px;height:176px;}.ww-benefit-scene img {scale:1;}}
+@media(prefers-reduced-motion:reduce) {.ww-benefit:hover .ww-scene-shopping,.ww-benefit:hover .ww-scene-present {translate:none;transition:none;}}
+
+/* Elsa sits within the opening; the front face occludes her lower dress. */
+.ww-scene-present img {width:100px!important;height:148px!important;top:15px!important;right:29px!important;clip-path:inset(0 0 47px 0);}
+
+.ww-scene-present .ww-box-opening {position:absolute;inset:0;width:100%;height:100%;z-index:0;filter:none;transform:none!important;}

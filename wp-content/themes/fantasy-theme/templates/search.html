@@ -1,0 +1,15 @@
+<!-- wp:pattern {"slug":"fantasy-theme/product-header"} /-->
+<!-- wp:pattern {"slug":"fantasy-theme/page-intro"} /-->
+<!-- wp:group {"tagName":"main","align":"full","className":"ww-page-main","layout":{"type":"default"}} -->
+<main class="wp-block-group alignfull ww-page-main"><!-- wp:group {"className":"ww-page-content ww-site-search","layout":{"type":"default"}} -->
+<div class="wp-block-group ww-page-content ww-site-search">
+<!-- wp:search {"label":"Search the site","buttonText":"Search"} /-->
+<!-- wp:query {"query":{"inherit":true}} -->
+<div class="wp-block-query"><!-- wp:post-template -->
+<!-- wp:group {"className":"ww-search-result","layout":{"type":"default"}} -->
+<div class="wp-block-group ww-search-result"><!-- wp:post-title {"level":2,"isLink":true} /--><!-- wp:post-excerpt {"moreText":"View details"} /--></div>
+<!-- /wp:group --><!-- /wp:post-template -->
+<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"space-between"}} --><!-- wp:query-pagination-previous /--><!-- wp:query-pagination-numbers /--><!-- wp:query-pagination-next /--><!-- /wp:query-pagination -->
+<!-- wp:query-no-results --><!-- wp:paragraph --><p>No matching pages were found. Try another search or explore the shop.</p><!-- /wp:paragraph --><!-- /wp:query-no-results -->
+</div><!-- /wp:query --></div><!-- /wp:group --></main><!-- /wp:group -->
+<!-- wp:template-part {"slug":"footer","tagName":"div"} /-->

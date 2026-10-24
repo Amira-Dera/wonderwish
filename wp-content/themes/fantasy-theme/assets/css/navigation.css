@@ -1,0 +1,101 @@
+/* One native Gutenberg navigation across all WonderWish templates. */
+.ww-site-header {position:relative;z-index:30;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:24px;max-width:1320px;margin:0 auto!important;padding:25px 36px;box-sizing:border-box;background:transparent;color:inherit;}
+.ww-site-brand {margin:0;font-size:27px;font-weight:800;letter-spacing:-1.3px;white-space:nowrap;line-height:1.4;}
+.ww-site-brand a {color:inherit;text-decoration:none;}.ww-site-brand span {color:#9fdcff;vertical-align:top;font-size:15px;margin-left:4px;}
+.ww-site-navigation {font-size:12px;font-weight:600;justify-self:end;color:inherit;}.ww-site-navigation .wp-block-navigation__container {gap:20px;}.ww-site-navigation a {color:inherit;text-decoration:none;}.ww-site-navigation a:hover {text-decoration:underline;text-underline-offset:5px;}
+.ww-site-navigation .wp-block-navigation__submenu-container {background:#fff;color:#214e7d;border:1px solid #d9e7f3;border-radius:12px;box-shadow:0 12px 28px #113b6320;min-width:180px;overflow:hidden;}
+.ww-site-navigation .wp-block-navigation__submenu-container a {padding:11px 16px;font-size:12px;}
+.ww-site-navigation .wp-block-navigation__responsive-container.is-menu-open {background:#153a74!important;color:#fff!important;}
+.ww-site-navigation .wp-block-navigation__responsive-container.is-menu-open a,
+.ww-site-navigation .wp-block-navigation__responsive-container.is-menu-open button {color:#fff!important;}
+.ww-site-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {align-items:flex-start;gap:22px;}
+.ww-site-tools {display:flex;gap:15px;align-items:center;margin:0!important;flex-wrap:nowrap;}
+.ww-site-tools .wc-block-mini-cart__button {color:inherit;padding:7px;}.ww-site-tools .wc-block-mini-cart__icon {width:25px;height:25px;}
+.ww-nav-search {margin:0!important;min-width:30px;}.ww-nav-search .wp-block-search__button {background:transparent!important;border:0;color:inherit;padding:5px;margin:0;}
+.ww-nav-search .wp-block-search__input {border:1px solid #bcd7ed;border-radius:10px;background:#fff;color:#214e7d;font:inherit;font-size:14px;padding:12px;min-width:0;}
+.ww-nav-search.wp-block-search__searchfield-visible {position:absolute;z-index:35;right:36px;top:84px;width:min(380px,calc(100vw - 40px));background:#fff;color:#214e7d;padding:8px;border-radius:12px;box-shadow:0 10px 30px #143c7020;}
+.ww-account-page .ww-site-header {color:#214e7d;}.ww-auth-page .ww-site-header {color:#fff;}
+.ww-site-header :focus-visible {outline:2px solid #73b8e6;outline-offset:4px;}
+@media(max-width:1100px){.ww-site-header {gap:15px;padding-inline:24px;}.ww-site-navigation .wp-block-navigation__container {gap:14px;}.ww-site-navigation {font-size:11px;}.ww-site-brand {font-size:25px;}}
+@media(max-width:1000px){.ww-site-header {grid-template-columns:minmax(0,1fr) auto auto;padding:21px 22px;gap:17px;}.ww-site-navigation .wp-block-navigation__responsive-container-open:not(.always-shown) {display:flex;}.ww-site-navigation .wp-block-navigation__responsive-container:not(.is-menu-open) {display:none!important;}.ww-site-navigation .wp-block-navigation__responsive-container.is-menu-open {display:flex!important;}.ww-site-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container {background:transparent;color:#d9eeff;border:0;box-shadow:none;border-radius:0;padding-left:12px;}.ww-site-tools {gap:9px;}.ww-site-brand {font-size:24px;}.ww-nav-search.wp-block-search__searchfield-visible {right:20px;top:78px;}}
+@media(max-width:380px){.ww-site-header {gap:10px;padding-inline:17px;}.ww-site-brand {font-size:22px;}.ww-site-tools {gap:5px;}}
+
+.ww-nav-search .wp-block-search__inside-wrapper {padding:0;border:0;background:transparent;box-shadow:none;}
+.ww-nav-search.wp-block-search__searchfield-hidden .wp-block-search__input {padding:0;border:0;min-height:0;}
+.ww-nav-search .wp-block-search__button {width:38px;height:38px;min-height:38px;display:flex;align-items:center;justify-content:center;color:inherit!important;}
+.ww-nav-cart-link {display:flex;align-items:center;justify-content:center;width:39px;height:39px;min-width:39px;color:inherit;text-decoration:none;}
+@media(max-width:1000px){
+ .wp-block-group:has(.ww-site-header .is-menu-open) {position:relative;z-index:100001;overflow:visible;}
+ .ww-site-header:has(.is-menu-open) {z-index:100001;}
+ .ww-site-navigation .is-menu-open .wp-block-navigation__responsive-container-content {align-items:flex-start!important;padding:72px 24px 30px;}
+ .ww-site-navigation .is-menu-open .wp-block-navigation__container,
+ .ww-site-navigation .is-menu-open .wp-block-navigation-item {align-items:flex-start!important;}
+ .ww-site-navigation .is-menu-open .wp-block-navigation-item__content {text-align:left;}
+}
+
+/* Original vector wordmark with an enchanted gift replacing the shooting star. */
+.ww-brand-logo {display:block;width:205px;height:auto;max-width:100%;filter:brightness(0) invert(1);}
+.ww-site-brand {line-height:1;}
+.ww-account-page:not(.ww-auth-page) .ww-site-brand .ww-brand-logo {filter:none;}
+.ww-footer-wordmark .ww-brand-logo {width:245px;}
+@media(max-width:1000px){.ww-site-brand .ww-brand-logo {width:177px;}}
+@media(max-width:380px){.ww-site-brand .ww-brand-logo {width:150px;}}
+
+/* Supplied magical-star logo, with transparent alpha and compact display size. */
+.ww-brand-logo {width:185px;filter:none;}
+.ww-footer-wordmark .ww-brand-logo {width:205px;}
+.ww-account-page:not(.ww-auth-page) .ww-site-brand .ww-brand-logo {filter:brightness(0) saturate(100%) invert(22%) sepia(49%) saturate(1309%) hue-rotate(178deg) brightness(92%) contrast(92%);}
+@media(max-width:1000px){.ww-site-brand .ww-brand-logo {width:157px;}}
+@media(max-width:380px){.ww-site-brand .ww-brand-logo {width:140px;}}
+.ww-brand-logo {width:210px;}
+.ww-footer-wordmark .ww-brand-logo {width:225px;}
+@media(max-width:1000px){.ww-site-brand .ww-brand-logo {width:172px;}}
+@media(max-width:380px){.ww-site-brand .ww-brand-logo {width:148px;}}
+
+.ww-home-content,.ww-home-content>.wp-block-post-content {margin:0;padding:0;max-width:none;}
+.ww-home-content>.wp-block-post-content>* {margin-block-start:0;}
+
+.home .wp-site-blocks {position:relative;}
+.home .ww-home-header {position:absolute;inset:0 0 auto;z-index:30;margin:0;color:#fff;}
+.home .ww-home-header:has(.is-menu-open) {z-index:100001;}
+.home .ww-magic-hero>.ww-hero-body {min-height:100svh;padding-top:150px;}
+.admin-bar.home .ww-magic-hero>.ww-hero-body {min-height:calc(100svh - 32px);}
+
+/* Native TI counter and Woo bag: compact, equally sized utility icons. */
+.ww-site-tools .wishlist_products_counter {position:relative;display:flex;align-items:center;justify-content:center;width:40px;height:40px;color:inherit;text-decoration:none;}
+.ww-site-tools .wishlist_products_counter::before {content:""!important;display:block;width:25px;height:25px;margin:0!important;background:currentColor;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z' fill='none' stroke='black' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;}
+.ww-site-tools .wishlist_products_counter_text {display:none!important;}
+.ww-site-tools .wishlist_products_counter_number {position:absolute;right:-3px;top:-2px;min-width:17px;height:17px;padding:0 3px;box-sizing:border-box;border-radius:20px;background:#e6f4ff;color:#174e8d;font-size:10px;font-weight:800;line-height:17px;text-align:center;}
+.ww-site-tools .wishlist_products_counter_number:empty {display:none;}
+.ww-site-tools .wc-block-mini-cart__badge {background:#e6f4ff!important;color:#174e8d!important;}
+.ww-site-header {gap:28px;}
+@media(max-width:1000px){.ww-site-header {gap:15px;}}
+/* Optical size alignment: Woo's 32px SVG has a smaller inner bag drawing. */
+.ww-site-navigation {font-size:15px;font-weight:600;}
+.ww-site-navigation .wp-block-navigation__container {gap:28px;}
+.ww-site-tools {gap:12px;}
+.ww-site-tools .wishlist_products_counter,.ww-site-tools .wc-block-mini-cart__button,.ww-nav-cart-link {width:44px;height:44px;min-width:44px;min-height:44px;padding:0;display:flex;align-items:center;justify-content:center;box-sizing:border-box;}
+.ww-site-tools .wc-block-mini-cart__icon {width:40px!important;height:40px!important;}
+.ww-site-tools .wishlist_products_counter::before {width:25px;height:25px;}
+.ww-site-tools .wishlist_products_counter_number {top:1px;right:0;}
+.ww-nav-cart-link svg {width:31px;height:31px;}
+@media(max-width:1100px){.ww-site-navigation {font-size:14px;}.ww-site-navigation .wp-block-navigation__container {gap:20px;}}
+@media(max-width:1000px){.ww-site-navigation {font-size:17px;}.ww-site-tools {gap:5px;}}
+
+/* Shared optical alignment; eliminate Gutenberg's inherited flow margin on nav. */
+.ww-site-header>* {margin-block:0!important;align-self:center;}
+.ww-site-brand a {display:flex;align-items:center;height:64px;}
+.ww-site-brand .ww-brand-logo {transform:translateY(-9px);}
+.ww-site-navigation {margin:0!important;}
+.ww-site-tools .wishlist_products_counter::before {width:21px;height:21px;}
+.ww-site-tools .wc-block-mini-cart__icon {width:34px!important;height:34px!important;}
+.ww-site-tools .wc-block-mini-cart__quantity-badge {width:44px;height:44px;display:flex;align-items:center;justify-content:center;}
+.ww-site-tools .wishlist_products_counter_number,.ww-site-tools .wc-block-mini-cart__badge {font-size:9px;min-width:15px;height:15px;line-height:15px;}
+.ww-site-tools .wishlist_products_counter_number {top:4px;right:2px;}
+.ww-nav-cart-link svg {width:26px;height:26px;}
+.ww-account-page .ww-product-sky,.ww-auth-page .ww-product-sky {background:radial-gradient(ellipse at 80% 65%,#65bafc52,transparent 48%),radial-gradient(ellipse at 12% 90%,#061b5b80,transparent 50%),linear-gradient(135deg,#112767,#144bac 52%,#2379ca)!important;color:#fff!important;}
+.ww-account-page .ww-site-header,.ww-auth-page .ww-site-header {color:#fff!important;}
+.ww-account-page .ww-site-brand .ww-brand-logo,.ww-auth-page .ww-site-brand .ww-brand-logo {filter:none!important;}
+@media(max-width:1000px){.ww-site-brand a {height:54px;}.ww-site-brand .ww-brand-logo {transform:translateY(-7px);}}
+/* Login retains its original transparent header over the cinematic sky. */
+.ww-auth-page .ww-product-sky {background:transparent!important;}

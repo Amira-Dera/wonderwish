@@ -1,0 +1,13 @@
+.DS_Store
+.env
+.env.*
+wp-config.php
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.log
+node_modules/
+wp-content/uploads/
+wp-content/cache/
+wp-content/database/

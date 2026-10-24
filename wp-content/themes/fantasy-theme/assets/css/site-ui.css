@@ -1,0 +1,49 @@
+/* Mouse clicks stay clean; keyboard users retain a clear focus indicator. */
+body .wp-site-blocks :focus:not(:focus-visible) {outline:none!important;outline-offset:0!important;box-shadow:none!important;}
+body .wp-site-blocks :focus-visible {outline:2px solid #4797ca;outline-offset:3px;}
+/* WooCommerce provides the real count; override its low-contrast inline colors. */
+body .wc-block-mini-cart__badge {background:#fff!important;color:#173d73!important;border:1px solid #b9d4eb;min-width:20px;min-height:20px;padding:2px 4px;border-radius:50%;font-size:11px;font-weight:800;line-height:1.2;display:flex;align-items:center;justify-content:center;}
+body .wc-block-mini-cart__badge[hidden] {display:none!important;}
+
+/* Native WooCommerce mini-cart drawer, shared across the whole store. */
+.wc-block-mini-cart__drawer {background:#f7fbff;color:#21496c;--wc-content-bg:#f7fbff;--wc-content-color:#21496c;}
+.wc-block-mini-cart__drawer .wc-block-mini-cart__title {font-size:25px;letter-spacing:-.035em;color:#173d73;}
+.wc-block-mini-cart__drawer .wc-block-components-product-name {color:#245e92;font-size:14px;font-weight:650;text-decoration:none;line-height:1.5;}
+.wc-block-mini-cart__drawer .wc-block-components-product-metadata__description {display:none;}
+.wc-block-mini-cart__drawer .wc-block-cart-item__image img {object-fit:contain;border-radius:12px;background:#fff;padding:5px;}
+.wc-block-mini-cart__drawer .wc-block-components-quantity-selector {border:0;gap:4px;width:116px;}
+.wc-block-mini-cart__drawer .wc-block-components-quantity-selector::after {display:none;}
+.wc-block-mini-cart__drawer .wc-block-components-quantity-selector__button {flex:0 0 32px;width:32px;height:32px;min-width:32px;border:1px solid #bed5e9;border-radius:50%;background:white;color:#245e92;opacity:1;}
+.wc-block-mini-cart__drawer .wc-block-components-quantity-selector__button:disabled {opacity:.45;}
+.wc-block-mini-cart__drawer .wc-block-components-quantity-selector__input {min-width:32px;width:32px;padding:0;}
+.wc-block-mini-cart__drawer .wc-block-mini-cart__footer {background:white;border-top:1px solid #dce8f3;padding:22px;}
+.wc-block-mini-cart__drawer .wc-block-mini-cart__footer-actions {gap:12px;}
+.wc-block-mini-cart__drawer .wc-block-mini-cart__footer-actions a,.wc-block-mini-cart__drawer .wc-block-mini-cart__shopping-button {background:#205e98;color:#fff;border:1px solid #205e98;border-radius:99px;min-height:48px;font-size:14px;font-weight:650;text-decoration:none;animation:none;}
+.wc-block-mini-cart__drawer .wc-block-mini-cart__footer-actions .wc-block-mini-cart__footer-cart {background:#fff;color:#205e98;}
+.wc-block-mini-cart__drawer .wc-block-components-drawer__close {color:#205e98;background:transparent;border:0;}
+.wc-block-mini-cart__drawer :focus-visible {outline:2px solid #4797ca;outline-offset:3px;}
+/* Drawer rows use the available width rather than squeezing a third price column. */
+body .wc-block-mini-cart__drawer {width:min(440px,100vw);max-width:100vw;background:#f8fbff;}
+body .wc-block-mini-cart__drawer .wc-block-mini-cart__title {margin:0!important;padding:28px 62px 28px 24px;background:linear-gradient(120deg,#153772,#246fb0);color:#fff;font-size:23px;line-height:1.4;}
+body .wc-block-mini-cart__drawer .wc-block-components-drawer__close {color:#fff;z-index:2;top:22px;right:16px;width:40px;height:40px;}
+body .wc-block-mini-cart__drawer .wc-block-mini-cart__items {padding-inline:20px;}
+body .wc-block-mini-cart__drawer table.wc-block-cart-items {width:100%;margin:0;}
+body .wc-block-mini-cart__drawer table.wc-block-cart-items .wc-block-cart-items__row {display:grid;grid-template-columns:76px minmax(0,1fr);gap:8px 16px;padding:23px 0;border-bottom:1px solid #dce8f3;}
+body .wc-block-mini-cart__drawer table.wc-block-cart-items .wc-block-cart-item__image {grid-column:1!important;grid-row:1 / span 2!important;width:76px!important;padding:0!important;}
+body .wc-block-mini-cart__drawer table.wc-block-cart-items .wc-block-cart-item__image img {width:76px;height:84px;object-fit:contain;padding:8px;border:1px solid #e0ebf5;}
+body .wc-block-mini-cart__drawer table.wc-block-cart-items .wc-block-cart-item__product {grid-column:2!important;grid-row:1!important;width:auto;padding:0!important;min-width:0;}
+body .wc-block-mini-cart__drawer table.wc-block-cart-items .wc-block-cart-item__total {grid-column:2!important;grid-row:2!important;width:auto;padding:0!important;text-align:start;font-size:13px;font-weight:700;}
+body .wc-block-mini-cart__drawer .wc-block-cart-item__total-price-and-sale-badge-wrapper {justify-content:flex-start;}
+body .wc-block-mini-cart__drawer .wc-block-cart-item__wrap {gap:9px;}
+body .wc-block-mini-cart__drawer .wc-block-mini-cart__footer-actions {display:grid;grid-template-columns:1fr 1fr;}
+body .wc-block-mini-cart__drawer .wc-block-mini-cart__footer-actions a {padding:12px 10px;min-width:0;font-size:13px;}
+body .wc-block-mini-cart__drawer .wc-block-mini-cart__footer {padding:20px 24px max(22px,env(safe-area-inset-bottom));}
+@media(max-width:480px){body .wc-block-mini-cart__drawer .wc-block-mini-cart__items {padding-inline:18px;}body .wc-block-mini-cart__drawer .wc-block-mini-cart__title {padding-left:20px;}body .wc-block-mini-cart__drawer .wc-block-mini-cart__footer {padding-inline:18px;}}
+/* Keep the native close control visible above the title background. */
+body .wc-block-mini-cart__drawer .wc-block-components-drawer__close {top:24px!important;right:18px!important;margin:0!important;padding:8px!important;color:#fff!important;background:#174c80!important;border:1px solid #b7defb66!important;border-radius:50%;z-index:10;}
+body .wc-block-mini-cart__drawer .wc-block-components-drawer__close svg {fill:currentColor;}
+body .wc-block-mini-cart__drawer .wc-block-mini-cart__title {box-shadow:none!important;}
+body .wc-block-mini-cart__drawer .wp-block-woocommerce-filled-mini-cart-contents-block {padding-top:0;}
+/* TI's genuine add/remove alerts use the same static controls. */
+.tinv-modal .tinv-modal-inner {border:1px solid #d1e3f1;border-radius:20px;background:#fff;color:#244e74;box-shadow:0 18px 50px #173d7326;}
+.tinv-modal .tinv-modal-inner button {min-height:44px;background:#205e98!important;color:#fff!important;border:0!important;border-radius:99px!important;padding:11px 20px;font-family:inherit;font-size:13px;animation:none!important;}
