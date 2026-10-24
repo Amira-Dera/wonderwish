@@ -10,7 +10,15 @@ WonderWish's custom Gutenberg child theme and read-only maintenance tools.
 
 Install the theme in an existing compatible WordPress/WooCommerce installation
 with Twenty Twenty-Five available. This repository intentionally excludes
-WordPress core, third-party plugins, credentials, uploads and the database.
+WordPress core, credentials and the database. The tracked `wp-content` includes
+the installed plugins, all themes, MU plugins, the Studio database drop-in, and
+public Media Library uploads. Runtime caches, logs, temporary upgrade files,
+private WooCommerce downloads and nested Git metadata are excluded.
+
+The included `wp-content/db.php` and SQLite MU plugin belong to the local Studio
+environment. When migrating to a MySQL hosting environment, use a MySQL-compatible
+database export and omit the Studio SQLite drop-in/integration from deployment;
+do not remove them from the working local Studio site.
 
 The manually edited Home page, saved Site Editor templates, products, orders and
 store settings are database content. Use a separate secure full-site export to

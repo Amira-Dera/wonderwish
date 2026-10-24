@@ -1,0 +1,4 @@
+interface:
+  display_name: "Accessibility Compliance Auditor"
+  short_description: "Audit and fix WCAG 2.1 and 2.2 AA barriers"
+  default_prompt: "Use $a11y-compliance-auditor to audit and improve this interface for WCAG AA, keyboard, screen-reader, and semantic accessibility."

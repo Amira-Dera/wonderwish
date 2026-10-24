@@ -1,0 +1,5 @@
+interface:
+display_name: "Gutenberg Structure"
+short_description: "Organize and maintain Gutenberg theme architecture"
+default_prompt: "Use $gutenberg-structure to determine the correct file structure and architecture for this WordPress Gutenberg theme."
+

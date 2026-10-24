@@ -1,0 +1,13 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "starter-theme/ly-faq-list",
+  "title": ".LY FAQ List",
+  "category": "widgets",
+  "icon": "editor-help",
+  "description": "Display published .LY FAQs from the dashboard.",
+  "textdomain": "starter-theme",
+  "supports": { "html": false, "multiple": false },
+  "editorScript": "file:./editor.js",
+  "render": "file:./render.php"
+}

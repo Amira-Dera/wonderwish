@@ -1,0 +1,109 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": { "contentSize": "760px", "wideSize": "1104px" },
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        { "slug": "ink", "name": "Ink", "color": "#0b1724" },
+        { "slug": "night", "name": "Night", "color": "#0d1b2a" },
+        { "slug": "canvas", "name": "Canvas", "color": "#f1f6fa" },
+        { "slug": "why-canvas", "name": "Why Choose canvas", "color": "#F4F6F9" },
+        { "slug": "why-icon-bg", "name": "Feature icon background", "color": "#EDF7E2" },
+        { "slug": "why-icon-line", "name": "Feature icon border", "color": "#C2E890" },
+        { "slug": "why-icon-ink", "name": "Feature icon green", "color": "#4A941A" },
+        { "slug": "why-orbit-cyan", "name": "Planet orbit cyan", "color": "#60CFFF" },
+        { "slug": "why-card-line", "name": "Feature card border", "color": "#E2EAF2" },
+        { "slug": "why-chevron-bg", "name": "FAQ chevron background", "color": "#EEF3F8" },
+        { "slug": "why-feature-copy", "name": "Feature body text", "color": "#6B7F96" },
+        { "slug": "success-soft-word", "name": "Success story unfinished word", "color": "#D6E0EC" },
+        { "slug": "why-hack-row", "name": "Domain hack example background", "color": "#101E2C" },
+        { "slug": "why-hack-row-line", "name": "Domain hack example border", "color": "#1A2A3D" },
+        { "slug": "why-hack-available", "name": "Available badge background", "color": "#183D26" },
+        { "slug": "why-hack-registered", "name": "Registered badge background", "color": "#3B2027" },
+        { "slug": "why-hack-red", "name": "Registered badge text", "color": "#EF7A7A" },
+        { "slug": "white", "name": "White", "color": "#ffffff" },
+        { "slug": "lime", "name": "Lime", "color": "#8ED968" },
+        { "slug": "footer", "name": "Footer", "color": "#060F1A" },
+        { "slug": "hero-base", "name": "Hero base", "color": "#0B1523" },
+        { "slug": "why-hero-top", "name": "Why Choose hero top glow", "color": "#1F3D5C" },
+        { "slug": "why-hero-side", "name": "Why Choose hero side glow", "color": "#122034" },
+        { "slug": "why-hero-bottom", "name": "Why Choose hero bottom glow", "color": "#0D1E32" },
+        { "slug": "card-dark", "name": "Dark card", "color": "#0E1B2E" },
+        { "slug": "footer-line", "name": "Footer divider", "color": "#1E2F45" },
+        { "slug": "footer-link", "name": "Footer link", "color": "#A8BDD4" },
+        { "slug": "trust", "name": "Trustpilot background", "color": "#0D1C2E" },
+        { "slug": "menu-icon-bg", "name": "Menu icon background", "color": "#111F1A" },
+        { "slug": "cyan", "name": "Cyan", "color": "#37c5eb" },
+        { "slug": "cyan-ink", "name": "Cyan on light", "color": "#087a99" },
+        { "slug": "orange", "name": "Orange", "color": "#f4a036" },
+        { "slug": "orange-ink", "name": "Orange on light", "color": "#995400" },
+        { "slug": "muted", "name": "Muted", "color": "#7f91a2" },
+        { "slug": "muted-ink", "name": "Muted on light", "color": "#5a6b7a" },
+        { "slug": "line", "name": "Line", "color": "#dfe8ef" }
+      ]
+    },
+    "spacing": {
+      "units": ["px", "rem", "em", "%", "vw", "vh"],
+      "spacingSizes": [
+        { "slug": "10", "size": "0.5rem", "name": "Extra small" },
+        { "slug": "20", "size": "0.75rem", "name": "Small" },
+        { "slug": "30", "size": "1rem", "name": "Base" },
+        { "slug": "40", "size": "1.5rem", "name": "Medium" },
+        { "slug": "50", "size": "2rem", "name": "Large" },
+        { "slug": "60", "size": "3rem", "name": "Extra large" },
+        { "slug": "70", "size": "clamp(3.5rem, 7vw, 7rem)", "name": "Section" }
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "slug": "sans",
+          "name": "Montserrat",
+          "fontFamily": "Montserrat, Arial, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Montserrat",
+              "fontWeight": "400 700",
+              "fontStyle": "normal",
+              "src": ["file:./assets/fonts/montserrat-variable.ttf"]
+            }
+          ]
+        }
+      ],
+      "fontSizes": [
+        { "slug": "small", "name": "Small", "size": "0.8125rem" },
+        { "slug": "medium", "name": "Medium", "size": "1rem" },
+        { "slug": "large", "name": "Large", "size": "1.25rem" },
+        { "slug": "section", "name": "Section title", "size": "clamp(2rem, 4vw, 3rem)" },
+        { "slug": "hero", "name": "Hero title", "size": "clamp(2.8rem, 5.5vw, 4.5rem)" }
+      ]
+    }
+  },
+  "customTemplates": [
+    { "name": "page-success-stories", "title": ".LY Success Stories", "postTypes": ["page"] },
+    { "name": "page-why-choose-ly", "title": "Why Choose .LY", "postTypes": ["page"] }
+  ],
+  "templateParts": [
+    { "name": "header", "title": "Site Header", "area": "header" },
+    { "name": "footer", "title": "Site Footer", "area": "footer" }
+  ],
+  "styles": {
+    "color": { "background": "var(--wp--preset--color--canvas)", "text": "var(--wp--preset--color--ink)" },
+    "typography": { "fontFamily": "var(--wp--preset--font-family--sans)", "fontSize": "var(--wp--preset--font-size--medium)", "lineHeight": "1.6" },
+    "spacing": { "blockGap": "var(--wp--preset--spacing--30)" },
+    "elements": {
+      "heading": { "typography": { "fontWeight": "700", "lineHeight": "1.12", "letterSpacing": "-0.035em" } },
+      "link": { "color": { "text": "var(--wp--preset--color--lime)" } },
+      "button": {
+        "color": { "background": "var(--wp--preset--color--lime)", "text": "var(--wp--preset--color--ink)" },
+        "border": { "radius": "11px" },
+        "typography": { "fontSize": "0.875rem", "fontWeight": "700" },
+        "spacing": { "padding": { "top": "0.85rem", "right": "1.55rem", "bottom": "0.85rem", "left": "1.55rem" } }
+      }
+    }
+  }
+}

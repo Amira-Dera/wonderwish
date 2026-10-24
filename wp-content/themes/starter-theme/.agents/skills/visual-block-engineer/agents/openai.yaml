@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual Block Engineer"
+  short_description: "Build locked, Figma-accurate editable WordPress blocks"
+  default_prompt: "Use $visual-block-engineer to build this Figma-accurate WordPress block with direct content editing and protected layout and styling."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Responsive Interaction Engineer"
+  short_description: "Adapt dense interfaces for mobile and tablet"
+  default_prompt: "Use $responsive-interaction-engineer to make this complex interface clear, touch-friendly, accessible, and indexable across breakpoints."

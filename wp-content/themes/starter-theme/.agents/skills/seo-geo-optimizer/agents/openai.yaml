@@ -1,0 +1,4 @@
+interface:
+  display_name: "SEO and GEO Optimizer"
+  short_description: "Audit and improve pages for search and AI answers"
+  default_prompt: "Use $seo-geo-optimizer to audit and directly improve this page for SEO and generative engine visibility."

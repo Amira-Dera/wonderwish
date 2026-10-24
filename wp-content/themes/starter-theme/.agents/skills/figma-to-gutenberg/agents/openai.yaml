@@ -1,0 +1,4 @@
+interface:
+  display_name: "Figma to Gutenberg"
+  short_description: "Build editable Gutenberg pages from Figma frames"
+  default_prompt: "Use $figma-to-gutenberg to implement this Figma frame as an accurate, responsive, editable Gutenberg page."
