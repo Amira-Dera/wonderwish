@@ -14,5 +14,14 @@ test "$(cd "$SOURCE" && pwd -P)" != "$(cd "$TARGET" && pwd -P)" || {
  echo 'Keep the cPanel Git checkout separate from the live theme directory.' >&2; exit 1;
 }
 # No --delete: preserve existing files. No database, plugins, uploads or config.
-rsync -rlt --exclude='.git' --exclude='.DS_Store' "$SOURCE/" "$TARGET/"
-echo 'WonderWish theme deployed. Clear the website cache and verify the changed pages.'
+echo "Source theme: $SOURCE"
+echo "Live theme target: $TARGET"
+# Check content, not just size/timestamp; imported files can share timestamps.
+rsync -rltc --itemize-changes --exclude='.git' --exclude='.DS_Store' "$SOURCE/" "$TARGET/"
+for FILE in assets/css/account.css assets/css/notices.css inc/site-consistency.php woocommerce/myaccount/form-login.php; do
+ cmp "$SOURCE/$FILE" "$TARGET/$FILE" || { echo "Verification failed: $FILE" >&2; exit 1; }
+done
+COMMIT="$(git -C "$REPO_ROOT" rev-parse HEAD)"
+printf '%s\n' "$COMMIT" > "$TARGET/deployment-version.txt"
+echo "Verified deployed commit: $COMMIT"
+echo 'WonderWish theme files verified. Clear hosting/PHP caches and verify the changed pages.'
