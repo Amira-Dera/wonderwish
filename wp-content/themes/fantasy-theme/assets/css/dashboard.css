@@ -98,3 +98,6 @@
 .ww-account-inner-panel button.button,.ww-account-inner-panel a.button,.ww-account-inner-panel input.button {min-height:44px;display:inline-flex;align-items:center;justify-content:center;animation:none!important;}
 .ww-account-inner-panel .woocommerce-orders-table__cell-order-actions a.button {margin:3px;}
 .ww-account-inner-panel .woocommerce-pagination {display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;}
+/* Hide only the bottom bulk toolbar and sharing row; preserve product actions. */
+.ww-wishlist-page .tinvwl-table-manage-list tfoot,
+.ww-wishlist-page .tinv-wishlist .social-buttons {display:none!important;}
