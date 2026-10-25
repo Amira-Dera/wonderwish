@@ -1,4 +1,4 @@
-.ww-toast-region {position:fixed;inset:auto 24px 24px auto;width:min(390px,calc(100vw - 32px));z-index:100000;pointer-events:none;font-family:inherit;}
+.ww-toast-region {position:fixed;top:calc(var(--wp-admin--admin-bar--height,0px) + 100px);left:50%;transform:translateX(-50%);width:min(390px,calc(100vw - 32px));z-index:100000;pointer-events:none;font-family:inherit;}
 .ww-toast {position:relative;display:flex;align-items:center;gap:12px;padding:14px 12px 14px 18px;background:radial-gradient(ellipse at 0 0,#e9f6ff,transparent 65%),#fff;color:#214e78;border:1px solid #bcd8ee;border-radius:17px;box-shadow:0 10px 35px #123c6b24,0 0 18px #9dd8ff26;pointer-events:auto;font-size:14px;line-height:1.5;animation:ww-toast-enter .2s ease-out;}
 .ww-toast::before {content:'✦';position:absolute;top:-10px;left:22px;color:#5ba9dc;font-size:20px;text-shadow:0 0 12px #bce5ff;pointer-events:none;}
 .ww-toast-icon {display:grid;place-items:center;flex:0 0 28px;height:28px;border-radius:50%;background:#eaf5ff;color:#2468a7;font-weight:700;}
@@ -9,5 +9,5 @@
 body.ww-toast-ready>.tinv-wishlist .tinvwl_added_to_wishlist {visibility:hidden!important;}
 .ww-cart-confirmation[hidden],[hidden].woocommerce-message,[hidden].wc-block-components-notice-banner {display:none!important;}
 @keyframes ww-toast-enter {from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
-@media(max-width:600px){.ww-toast-region {right:16px;bottom:max(16px,env(safe-area-inset-bottom));}.ww-toast {font-size:13px;}}
+@media(max-width:600px){.ww-toast-region {top:calc(var(--wp-admin--admin-bar--height,0px) + 90px + env(safe-area-inset-top));}.ww-toast {font-size:13px;}}
 @media(prefers-reduced-motion:reduce){.ww-toast {animation:none;}}
