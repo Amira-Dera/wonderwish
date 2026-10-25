@@ -17,11 +17,19 @@ echo "Source theme: $SOURCE"
 echo "Live theme target: $TARGET"
 # Minimal shared hosting may not provide rsync. Copy each theme file directly,
 # independent of size/timestamps, excluding nested Git and desktop metadata.
-while IFS= read -r -d '' FILE; do
- RELATIVE="${FILE#"$SOURCE/"}"
- mkdir -p "$(dirname "$TARGET/$RELATIVE")"
- cp -f "$FILE" "$TARGET/$RELATIVE"
-done < <(find "$SOURCE" -type d -name .git -prune -o -type f ! -name .DS_Store -print0)
+# Use find -exec instead of process substitution: jailed cPanel shells may have
+# no /dev/fd entries. Arguments preserve spaces and other characters in names.
+find "$SOURCE" -type d -name .git -prune -o -type f ! -name .DS_Store -exec /bin/sh -c '
+ set -eu
+ source_root=$1
+ target_root=$2
+ shift 2
+ for source_file do
+  relative_file=${source_file#"$source_root/"}
+  mkdir -p "$(dirname "$target_root/$relative_file")"
+  cp -f "$source_file" "$target_root/$relative_file"
+ done
+' copy-theme "$SOURCE" "$TARGET" {} +
 for FILE in assets/css/account.css assets/css/notices.css inc/site-consistency.php woocommerce/myaccount/form-login.php; do
  cmp "$SOURCE/$FILE" "$TARGET/$FILE" || { echo "Verification failed: $FILE" >&2; exit 1; }
 done
