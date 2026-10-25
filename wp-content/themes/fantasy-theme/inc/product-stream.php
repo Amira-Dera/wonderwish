@@ -6,7 +6,6 @@ if ( ! wc_get_products( array( 'status'=>'publish', 'limit'=>1, 'return'=>'ids',
  echo '<p>No gifts are available yet. Please check back soon.</p>'; return;
 }
 ?>
-<div class="ww-orbit-controls" hidden><button type="button" class="ww-orbit-toggle" aria-pressed="false">Pause motion</button><span>Hover a card to pause</span></div>
 <div class="ww-treasure-grid">
 <?php
 $available_gifts = wc_get_products( array( 'status' => 'publish', 'visibility' => 'catalog', 'limit' => 32, 'orderby' => 'date', 'order' => 'DESC' ) );

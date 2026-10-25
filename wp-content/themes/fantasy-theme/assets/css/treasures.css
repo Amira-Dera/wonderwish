@@ -46,10 +46,6 @@
 .ww-treasure-badge a {color:#315864;text-decoration:none;display:block;padding:3px 1px;}
 .ww-treasure-glitter span:nth-of-type(2),.ww-treasure-glitter span:nth-of-type(5) {color:#b084d0;}
 .ww-treasure-glitter span:nth-of-type(3),.ww-treasure-glitter span:nth-of-type(6) {color:#e3b85e;}
-.ww-orbit-controls {display:flex;align-items:center;justify-content:center;gap:18px;margin:0 auto 12px;font-size:11px;color:#65757c;position:relative;z-index:5;}
-.ww-orbit-controls[hidden] {display:none;}
-.ww-orbit-toggle {font:inherit;font-size:12px;background:transparent;color:#204e5e;border:1px solid #cbd9de;border-radius:30px;padding:9px 16px;cursor:pointer;}
-.ww-orbit-toggle:focus-visible {outline:3px solid #499db3;outline-offset:4px;}
 .ww-treasure-grid.is-stream {height:550px;position:relative;display:block;max-width:none;width:calc(100% + var(--treasure-gutter)*2);margin-inline:calc(var(--treasure-gutter)*-1);perspective:1400px;overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 8%,#000 91%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 8%,#000 91%,transparent);}
 .is-stream .ww-treasure-card {position:absolute;left:50%;top:50%;width:240px;margin:0;transform-origin:center;backface-visibility:hidden;background:#fff;will-change:transform;}
 .is-stream .ww-treasure-name {font-size:14px;min-height:40px;}
@@ -93,9 +89,3 @@
 @media(max-width:700px){.ww-treasures .ww-treasure-badge {top:10px;right:8px;font-size:8px;padding:4px 8px;}.ww-treasures .ww-treasure-image {padding:48px 12px 12px;}}
 .ww-treasures .ww-treasure-badge {background:#fff;border:1px solid #a9c5df;color:#215b93;}
 .ww-treasures .ww-treasure-badge a {color:#215b93;}
-/* Remove heading-level controls; retain a discreet motion toggle at the lower edge. */
-.ww-treasures .ww-orbit-controls {position:absolute;right:clamp(22px,4vw,64px);bottom:44px;margin:0;gap:0;}
-.ww-orbit-controls>span {display:none;}
-.ww-orbit-toggle {font-size:0;width:38px;height:38px;padding:0;display:grid;place-items:center;color:#205f9d;border-color:#a6c8e5;background:#fff;}
-.ww-orbit-toggle::before {content:'Ⅱ';font-size:17px;line-height:1;}
-.ww-orbit-toggle[aria-pressed="true"]::before {content:'▶';font-size:13px;}
