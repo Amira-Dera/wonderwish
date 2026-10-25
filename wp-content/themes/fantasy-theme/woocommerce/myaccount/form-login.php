@@ -34,7 +34,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 <div class="ww-world-glitter ww-auth-glitter" aria-hidden="true"><canvas class="ww-world-canvas"></canvas></div>
 <div class="ww-auth-sky" aria-hidden="true"><span class="ww-auth-cloud ww-cloud-one"></span><span class="ww-auth-cloud ww-cloud-two"></span><img class="ww-auth-toothless" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/treasures/toothless.webp' ); ?>" alt="" width="362" height="640"><img class="ww-auth-light" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/account/light-fury.webp' ); ?>" alt="" width="829" height="418"><span class="ww-auth-star">✦</span><span class="ww-auth-star">✧</span><span class="ww-auth-star">✦</span></div>
 <div class="ww-auth-card">
-<a class="ww-auth-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">WonderWish<span aria-hidden="true">✦</span></a>
+<a class="ww-auth-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/brand/wonderwish-magical-logo-blue.png' ); ?>" alt="WonderWish" width="1954" height="805" decoding="async" /></a>
 <p class="ww-auth-welcome">Your little world of wonder.</p>
 
 

@@ -10,7 +10,8 @@
 .ww-auth-light {width:clamp(230px,34vw,500px);height:auto;right:-6%;top:43%;rotate:10deg;animation-delay:-3s;}
 .ww-auth-star {position:absolute;left:20%;top:12%;font-size:19px;color:#d9f0ff;animation:ww-auth-spark 5s ease-in-out 3;}.ww-auth-star:nth-last-child(2){left:80%;top:20%;font-size:12px;animation-delay:1s;}.ww-auth-star:last-child {left:15%;top:78%;font-size:11px;animation-delay:2s;}
 .ww-auth-card {width:min(100%,430px);box-sizing:border-box;background:#fffffff7;border:1px solid #e4f1ff;border-radius:24px;padding:35px 37px 30px;box-shadow:0 24px 70px #092d5d40;color:#1a3856;}
-.ww-auth-brand {display:block;text-align:center;font-size:29px;font-weight:750;letter-spacing:-.055em;color:#214e7e;text-decoration:none;}.ww-auth-brand span {color:#6aa5ce;font-size:18px;vertical-align:top;margin-left:4px;}
+.ww-auth-brand {display:block;text-align:center;text-decoration:none;}
+.ww-auth-brand img {display:block;width:min(240px,100%);height:auto;margin-inline:auto;object-fit:contain;}
 .ww-auth-welcome {text-align:center;font-size:12px;color:#70889e;margin:8px 0 29px;}
 .ww-auth-card #customer_login {display:block!important;}.ww-auth-card #customer_login>div {float:none!important;width:100%!important;padding:0!important;}
 .ww-auth-card [hidden] {display:none!important;}
