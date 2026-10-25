@@ -27,12 +27,13 @@ products, settings and saved Gutenberg content remain in the live database.
 
 Validation: shell syntax checked locally. Deployment on the hosting server still
 requires executing Deploy HEAD Commit; the local machine cannot verify the
-server's working-tree state, permissions or installed rsync.
+server's working-tree state or permissions. Deployment uses standard shell,
+find and copy commands; rsync is not required.
 
 ## Diagnose a successful deployment with an unchanged website
 
-The deployment log now prints source and destination folders, lists changed
-files, compares the account/notice files byte-for-byte, and writes the deployed
+The deployment log prints source and destination folders,
+compares the account/notice files byte-for-byte, and writes the deployed
 commit to `wp-content/themes/fantasy-theme/deployment-version.txt`.
 Open that file under the website URL to confirm the web server serves the same
 folder that deployment updated. If it is missing or old, check cPanel Domains →
