@@ -77,5 +77,5 @@ add_action( 'wp_enqueue_scripts', function () {
 // Keep the native confirmation text without the redundant View cart action.
 add_filter( 'wc_add_to_cart_message_html', function ( $message ) {
  $message = preg_replace( '#<a[^>]*class="[^"]*wc-forward[^"]*"[^>]*>.*?</a>#is', '', $message );
- return $message;
+ return '<span class="ww-cart-confirmation">' . $message . '</span>';
 } );
