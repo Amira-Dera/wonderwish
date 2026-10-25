@@ -1,0 +1,52 @@
+/* Keep WooCommerce's original messages, links, live regions and field IDs intact. */
+body .wp-site-blocks :is(.woocommerce-error,.woocommerce-info,.woocommerce-message),
+body :is(.wp-site-blocks,.wc-block-mini-cart__drawer) .wc-block-components-notice-banner {
+ --ww-notice-ink:#234f78;--ww-notice-line:#b9d7ee;--ww-notice-bg:#f0f8ff;
+ box-sizing:border-box;background:var(--ww-notice-bg)!important;color:var(--ww-notice-ink)!important;
+ border:1px solid var(--ww-notice-line)!important;border-inline-start:4px solid var(--ww-notice-line)!important;
+ border-radius:14px!important;padding:18px 22px!important;margin:18px 0 24px;
+ font-family:inherit;font-size:14px;line-height:1.7;box-shadow:0 5px 18px #173d7308;
+ overflow-wrap:anywhere;list-style:none;
+}
+body .wp-site-blocks :is(.woocommerce-error,.woocommerce-info,.woocommerce-message)::before,
+body .wp-site-blocks :is(.woocommerce-error,.woocommerce-info,.woocommerce-message)::after {display:none;}
+body .wp-site-blocks .woocommerce-error,
+body :is(.wp-site-blocks,.wc-block-mini-cart__drawer) .wc-block-components-notice-banner.is-error {
+ --ww-notice-ink:#813348;--ww-notice-line:#d99bab;--ww-notice-bg:#fff4f6;
+}
+body .wp-site-blocks .woocommerce-message,
+body :is(.wp-site-blocks,.wc-block-mini-cart__drawer) .wc-block-components-notice-banner.is-success {
+ --ww-notice-ink:#215b50;--ww-notice-line:#9ccbbf;--ww-notice-bg:#f0faf7;
+}
+body .wp-site-blocks .wc-block-components-notice-banner.is-warning {
+ --ww-notice-ink:#74521d;--ww-notice-line:#dfc38e;--ww-notice-bg:#fff9ed;
+}
+body .wp-site-blocks .woocommerce-error li {padding:0;margin:0;list-style:none;}
+body .wp-site-blocks .woocommerce-error li+li {margin-top:8px;}
+body .wp-site-blocks :is(.woocommerce-error,.woocommerce-info,.woocommerce-message) a,
+body .wp-site-blocks .wc-block-components-notice-banner__content a {color:inherit!important;text-decoration:underline;text-underline-offset:3px;font-weight:650;}
+body .wp-site-blocks .wc-block-components-notice-banner {align-items:flex-start;gap:12px;}
+body .wp-site-blocks .wc-block-components-notice-banner>svg {flex-shrink:0;background:transparent!important;fill:currentColor!important;color:var(--ww-notice-ink);margin-top:3px;}
+body .wp-site-blocks .wc-block-components-notice-banner__content {min-width:0;}
+body .wp-site-blocks .wc-block-components-notice-banner__dismiss {flex-shrink:0;min-width:32px;min-height:32px;border-radius:50%;color:inherit;opacity:1;}
+/* Inline errors remain associated with their native field; never hide them. */
+body .wp-site-blocks .wc-block-components-validation-error,
+body .wp-site-blocks .woocommerce form .form-row .woocommerce-error {color:#813348;font-size:13px;line-height:1.6;margin-top:8px;}
+body .wp-site-blocks .wc-block-components-validation-error p {margin:0;}
+body .wp-site-blocks .wc-block-components-text-input.has-error :is(input,textarea),
+body .wp-site-blocks .woocommerce form .woocommerce-invalid :is(input.input-text,select,textarea) {border-color:#bc5670!important;box-shadow:0 0 0 1px #bc567026!important;}
+body .wp-site-blocks .wc-block-components-text-input.has-error label {color:#813348!important;}
+body.ww-auth-page .woocommerce-notices-wrapper:not(:empty) {width:min(900px,calc(100% - 40px));margin:24px auto;}
+/* Password recovery uses native forms rather than the custom login card. */
+body.ww-auth-page form.woocommerce-ResetPassword {width:min(510px,calc(100% - 40px));max-width:510px;margin:48px auto;padding:32px;color:#234f78;background:#fff;border:1px solid #d5e5f3;border-radius:22px;}
+body.ww-auth-page form.woocommerce-ResetPassword .form-row {float:none;width:100%;padding:0;margin:18px 0;}
+body.ww-auth-page form.woocommerce-ResetPassword label {display:block;color:#385b7a;font-size:14px;margin-bottom:6px;}
+body.ww-auth-page form.woocommerce-ResetPassword input.input-text {box-sizing:border-box;width:100%;min-height:48px;border:1px solid #bdd3e7;border-radius:10px;background:#fbfdff;color:#183d61;font:inherit;padding:12px;}
+body.ww-auth-page form.woocommerce-ResetPassword button.button {min-height:48px;border:1px solid #2468a7;border-radius:99px;background:#2468a7;color:#fff;font:inherit;font-size:14px;padding:12px 24px;cursor:pointer;}
+body .wp-site-blocks :is(.woocommerce-error,.woocommerce-message,.woocommerce-info,.wc-block-components-notice-banner) :focus-visible,
+body.ww-auth-page form.woocommerce-ResetPassword :focus-visible {outline:2px solid #2468a7;outline-offset:3px;}
+@media(max-width:600px){
+ body .wp-site-blocks :is(.woocommerce-error,.woocommerce-info,.woocommerce-message),body .wp-site-blocks .wc-block-components-notice-banner {padding:15px!important;font-size:13px;border-radius:12px!important;}
+ body.ww-auth-page form.woocommerce-ResetPassword {padding:24px;margin:30px auto;}
+ body.ww-auth-page form.woocommerce-ResetPassword button.button {width:100%;}
+}

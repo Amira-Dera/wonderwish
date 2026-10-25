@@ -4,6 +4,10 @@ defined( 'ABSPATH' ) || exit;
 add_action( 'wp_enqueue_scripts', function () {
  wp_enqueue_style( 'wonderwish-navigation', get_stylesheet_directory_uri() . '/assets/css/navigation.css', array(), filemtime( __DIR__ . '/../assets/css/navigation.css' ) );
 }, 100 );
+// Shared native notices, including guest authentication and Checkout Blocks.
+add_action( 'wp_enqueue_scripts', function () {
+ wp_enqueue_style( 'wonderwish-notices', get_stylesheet_directory_uri() . '/assets/css/notices.css', array(), filemtime( __DIR__ . '/../assets/css/notices.css' ) );
+}, 110 );
 add_filter( 'document_title_parts', function ( $parts ) {
  $parts['site'] = 'WonderWish';
  unset( $parts['tagline'] );
