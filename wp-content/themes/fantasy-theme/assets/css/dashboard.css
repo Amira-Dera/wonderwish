@@ -101,3 +101,15 @@
 /* Hide only the bottom bulk toolbar and sharing row; preserve product actions. */
 .ww-wishlist-page .tinvwl-table-manage-list tfoot,
 .ww-wishlist-page .tinv-wishlist .social-buttons {display:none!important;}
+/* Orders use the same compact rows and rounded actions as saved gifts. */
+.ww-account-inner-panel .woocommerce-orders-table {table-layout:auto;border-collapse:separate;border-spacing:0;overflow:hidden;}
+.ww-account-inner-panel .woocommerce-orders-table thead th {padding:15px 16px;font-size:12px;line-height:1.5;text-align:start;vertical-align:middle;}
+.ww-account-inner-panel .woocommerce-orders-table tbody :is(th,td) {box-sizing:border-box;padding:16px;font-size:13px;line-height:1.6;vertical-align:middle;text-align:start;height:auto;}
+.ww-account-inner-panel .woocommerce-orders-table tbody th {background:transparent;font-weight:600;}
+.ww-account-inner-panel .woocommerce-orders-table__cell-order-actions a.button {box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;min-height:44px;height:auto;min-width:76px;width:auto;max-width:100%;padding:10px 20px!important;margin:4px;font-size:12px!important;line-height:1.5;white-space:normal;text-align:center;text-decoration:none;border-radius:99px!important;}
+@media(max-width:768px){
+ .ww-account-inner-panel .woocommerce-orders-table tbody tr {padding:10px 0;}
+ .ww-account-inner-panel .woocommerce-orders-table tbody td {padding:12px 14px;text-align:end;min-height:46px;}
+ .ww-account-inner-panel .woocommerce-orders-table tbody td::before {font-size:12px;line-height:1.6;}
+ .ww-account-inner-panel .woocommerce-orders-table__cell-order-actions a.button {margin:4px 0 4px 8px;}
+}
