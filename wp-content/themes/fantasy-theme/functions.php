@@ -130,3 +130,4 @@ add_action( 'wp_enqueue_scripts', function () {
  if ( ! is_page( array( 'contact', 'contact-us' ) ) ) return;
  wp_enqueue_style( 'wonderwish-contact', get_stylesheet_directory_uri() . '/assets/css/contact.css', array(), filemtime( __DIR__ . '/assets/css/contact.css' ) );
 } );
+require_once __DIR__ . '/inc/contact.php';
