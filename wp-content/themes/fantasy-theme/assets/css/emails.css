@@ -1,0 +1,27 @@
+/* Appended to WooCommerce's native CSS and inlined by its email renderer.
+ * Static, table-friendly styling: no JS, animation, web fonts or SVG dependency. */
+body, #outer_wrapper {background-color:#edf5fc!important;}
+#wrapper {box-sizing:border-box!important;padding:32px 12px!important;}
+#inner_wrapper {background-color:#edf5fc!important;}
+#template_container {background-color:#fff!important;border:1px solid #d4e4f2!important;border-radius:18px!important;box-shadow:0 8px 28px rgba(24,68,112,.08)!important;}
+#template_header_image {text-align:center!important;padding:12px 20px 26px!important;}
+#template_header_image p {margin:0!important;text-align:center!important;}
+#template_header_image img {display:inline-block!important;width:210px!important;max-width:100%!important;height:auto!important;max-height:none!important;}
+#template_header {background-color:#205e9c!important;background-image:linear-gradient(120deg,#173d73,#3689c3)!important;border-radius:17px 17px 0 0!important;}
+#header_wrapper {padding:30px 32px!important;text-align:start!important;}
+#template_header h1 {color:#fff!important;font-family:Arial,Helvetica,sans-serif!important;font-size:26px!important;font-weight:600!important;line-height:1.3!important;text-shadow:none!important;margin:0!important;}
+#body_content, #body_content_inner {background-color:#fff!important;}
+#body_content>table>tbody>tr>td {padding:30px 32px!important;}
+#body_content_inner, #body_content_inner p, #body_content_inner li {color:#355773!important;font-family:Arial,Helvetica,sans-serif!important;font-size:15px!important;line-height:1.75!important;}
+#body_content_inner h2, #body_content_inner h3 {color:#205e9c!important;font-family:Arial,Helvetica,sans-serif!important;line-height:1.4!important;}
+#body_content_inner a {color:#246ba8!important;text-decoration:underline;word-break:break-word;}
+#body_content_inner a.button, #body_content_inner a.wp-element-button, #body_content_inner .email-introduction a.link {background-color:#2468a7!important;border:1px solid #2468a7!important;border-radius:24px!important;color:#fff!important;display:inline-block!important;font-weight:600!important;padding:12px 22px!important;text-decoration:none!important;line-height:1.5!important;}
+#body_content_inner table.td {border-color:#d7e6f2!important;border-radius:10px;}
+#body_content_inner th.td {background-color:#f0f7fd!important;color:#244f76!important;padding:13px!important;border-color:#d7e6f2!important;}
+#body_content_inner td.td {padding:13px!important;border-color:#d7e6f2!important;color:#355773!important;}
+#body_content_inner tfoot th.td, #body_content_inner tfoot td.td {background-color:#f7fbff!important;}
+#body_content_inner .address {border:1px solid #d7e6f2!important;border-radius:10px;padding:16px!important;color:#58758d!important;font-style:normal!important;}
+#credit {color:#6a8399!important;font-family:Arial,Helvetica,sans-serif!important;font-size:12px!important;line-height:1.8!important;text-align:center!important;padding:26px 18px!important;}
+#credit strong {color:#205e9c!important;font-size:16px!important;}
+#credit a {color:#246ba8!important;text-decoration:underline;}
+@media only screen and (max-width:600px){#wrapper{padding:18px 8px!important;}#header_wrapper{padding:24px!important;}#template_header h1{font-size:23px!important;}#body_content>table>tbody>tr>td{padding:24px 20px!important;}#body_content_inner table th,#body_content_inner table td{font-size:13px!important;padding:9px!important;}}

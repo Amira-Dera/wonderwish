@@ -51,3 +51,14 @@ Six image files removed: **834,255 bytes**. The duplicate login Toothless image 
 - Existing WooCommerce overrides remain current; all theme PHP parses successfully.
 
 This cleanup intentionally retains assets used by saved content, inactive saved templates and reachable dynamic endpoints. Source/usage-rights records are preserved.
+# Transactional emails
+
+Shared email presentation lives in `inc/emails.php` and `assets/css/emails.css`.
+Content, enabled notifications and sender details remain under WooCommerce →
+Settings → Emails. The theme honors a configured logo and custom footer.
+Verification mail integrates through WPFactory's public send-message filter;
+it does not change verification rules. Run the local-only
+`studio wp eval-file tools/preview-emails.php` to render synthetic previews
+without sending mail. See `docs/maintenance/email-design-2026-10-26.md` in the
+repository for scope and unverified mailbox/live-provider checks.
+

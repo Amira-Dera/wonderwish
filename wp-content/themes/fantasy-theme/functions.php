@@ -124,3 +124,4 @@ require_once __DIR__ . '/inc/checkout-compat.php';
 require_once __DIR__ . '/inc/site-consistency.php';
 
 require_once __DIR__ . '/inc/home-editor.php';
+require_once __DIR__ . '/inc/emails.php';
