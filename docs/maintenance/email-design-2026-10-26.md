@@ -55,3 +55,7 @@ email, not an independently generated PDF attachment. Other plugins' mailers
 - Native WooCommerce logo selection maps the existing theme logo to this email-specific PNG; unrelated custom selections remain intact. PHPMailer embeds this local file with a CID for delivery rather than requiring Gmail to retrieve a remote image. No remote fetches or recipient/address changes.
 - Corrected both WooCommerce sender name and WP Mail SMTP's forced From Name to WonderWish in the live dashboard. SMTP had been forcing the legacy toys store label. Address, authentication and connection settings were preserved.
 - Local synthetic previews and offline MIME assembly passed, including inline PNG Content-ID, unchanged unrelated emails and preserved reset/verification links. Desktop and 390px layouts checked without horizontal overflow. No emails sent. Gmail/Outlook delivery and actual dark-mode rendering still need a newly received message after deployment; old received emails do not update.
+
+## Centered banner logo revision
+
+The native email-header.php (template version 10.7.0) now has a child-theme override placing the existing transparent white WonderWish PNG horizontally centered inside the blue gradient banner above the native email heading. The external logo area is removed. This shared header covers WooCommerce emails and wrapped account/verification messages. CID embedding now targets the white PNG. Native body, headings, links and data remain unchanged. Preview/MIME checks pass; dark-mode client rendering still requires a received-message check.
