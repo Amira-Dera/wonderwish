@@ -4,10 +4,38 @@ defined( 'ABSPATH' ) || exit;
 
 // Keep a dashboard-selected email logo; use the existing blue brand mark otherwise.
 function wonderwish_email_logo( $value ) {
- return $value ?: get_stylesheet_directory_uri() . '/assets/images/brand/wonderwish-magical-logo-blue.png';
+ // This original user-supplied image has an opaque blue background: the white
+ // wordmark remains legible when email clients recolor surrounding HTML.
+ if ( ! $value || false !== strpos( (string) $value, '/brand/wonderwish-magical-logo' ) ) {
+  return get_stylesheet_directory_uri() . '/assets/images/brand/wonderwish-email-logo.png';
+ }
+ return $value;
 }
 add_filter( 'option_woocommerce_email_header_image', 'wonderwish_email_logo' );
 add_filter( 'default_option_woocommerce_email_header_image', 'wonderwish_email_logo' );
+
+// Correct the legacy local-store name without changing a custom sender address.
+add_filter( 'woocommerce_email_from_name', function ( $name ) {
+ return in_array( strtolower( trim( (string) $name ) ), array( '', 'toys store', 'toy store', 'wonder wish' ), true ) ? 'WonderWish' : $name;
+} );
+
+/** Attach just the theme logo as an inline CID; never fetch remote image URLs.
+ * Other attachments and all authentication/recipient data remain untouched.
+ */
+function wonderwish_embed_email_logo( $mailer ) {
+ $logo_url = get_stylesheet_directory_uri() . '/assets/images/brand/wonderwish-email-logo.png';
+ if ( ! is_string( $mailer->Body ) || false === strpos( $mailer->Body, $logo_url ) ) return;
+ $file = get_stylesheet_directory() . '/assets/images/brand/wonderwish-email-logo.png';
+ if ( ! is_readable( $file ) ) return;
+ try {
+  if ( $mailer->addEmbeddedImage( $file, 'wonderwish-email-logo', 'WonderWish-logo.png', 'base64', 'image/png' ) ) {
+   $mailer->Body = str_replace( $logo_url, 'cid:wonderwish-email-logo', $mailer->Body );
+  }
+ } catch ( \Exception $exception ) {
+  // Keep the public URL as a fallback; a logo must never prevent mail delivery.
+ }
+}
+add_action( 'phpmailer_init', 'wonderwish_embed_email_logo', 100 );
 
 add_filter( 'woocommerce_email_styles', function ( $css ) {
  return $css . "\n" . file_get_contents( __DIR__ . '/../assets/css/emails.css' );

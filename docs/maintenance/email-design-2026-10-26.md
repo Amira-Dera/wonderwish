@@ -48,3 +48,10 @@ Remote images may be blocked by the recipient; native alt text remains.
 No PDF invoice plugin was available to inspect: this styles WooCommerce's invoice
 email, not an independently generated PDF attachment. Other plugins' mailers
 (e.g. form notifications) need their own integration if they bypass these hooks.
+
+## Email logo and sender follow-up
+
+- Reused the owner-supplied `WonderWish Magical Star Logo.png` unchanged as `assets/images/brand/wonderwish-email-logo.png`. Its opaque blue background keeps the white lettering readable when surrounding email colors change. Owner-supplied branding; no third-party source added.
+- Native WooCommerce logo selection maps the existing theme logo to this email-specific PNG; unrelated custom selections remain intact. PHPMailer embeds this local file with a CID for delivery rather than requiring Gmail to retrieve a remote image. No remote fetches or recipient/address changes.
+- Corrected both WooCommerce sender name and WP Mail SMTP's forced From Name to WonderWish in the live dashboard. SMTP had been forcing the legacy toys store label. Address, authentication and connection settings were preserved.
+- Local synthetic previews and offline MIME assembly passed, including inline PNG Content-ID, unchanged unrelated emails and preserved reset/verification links. Desktop and 390px layouts checked without horizontal overflow. No emails sent. Gmail/Outlook delivery and actual dark-mode rendering still need a newly received message after deployment; old received emails do not update.

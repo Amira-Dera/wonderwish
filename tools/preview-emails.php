@@ -5,6 +5,8 @@
 if ( ! defined( 'WP_CLI' ) || ! WP_CLI || ! in_array( wp_parse_url( home_url(), PHP_URL_HOST ), array( 'localhost', '127.0.0.1', '::1' ), true ) ) {
  throw new RuntimeException( 'Email previews are restricted to local CLI execution.' );
 }
+// Preview brand label only; never change the saved local site title.
+add_filter( 'option_blogname', static function () { return 'WonderWish'; } );
 $directory = ABSPATH . 'private-email-previews/';
 wp_mkdir_p( $directory );
 file_put_contents( $directory . '.gitignore', "*\n!.gitignore\n" );
@@ -54,6 +56,24 @@ $report['verification'] = array( 'wrapped' => str_contains( $verification, 'temp
 $core = apply_filters( 'retrieve_password_notification_email', array( 'to' => 'preview@example.invalid', 'subject' => 'Preview', 'message' => "Reset preview:\n" . home_url( '/wp-login.php?action=rp&key=design-preview-invalid&login=preview-customer' ), 'headers' => array() ) );
 file_put_contents( $directory . 'wordpress-reset.html', $core['message'] );
 $report['wordpress_reset'] = array( 'html_header' => in_array( 'Content-Type: text/html; charset=UTF-8', $core['headers'], true ), 'key_retained' => str_contains( $core['message'], 'design-preview-invalid' ) );
+// Assemble MIME locally; never connect to SMTP or send a message.
+require_once ABSPATH . WPINC . '/PHPMailer/Exception.php';
+require_once ABSPATH . WPINC . '/PHPMailer/PHPMailer.php';
+$mime = new \PHPMailer\PHPMailer\PHPMailer( true );
+$mime->setFrom( 'preview@example.invalid', 'WonderWish' );
+$mime->addAddress( 'preview@example.invalid' );
+$mime->Subject = 'Offline logo check';
+$mime->isHTML( true );
+$mime->Body = $verification;
+wonderwish_embed_email_logo( $mime );
+$mime->preSend();
+$assembled = $mime->getSentMIMEMessage();
+$report['embedded_logo'] = str_contains( $mime->Body, 'cid:wonderwish-email-logo' ) && str_contains( $assembled, 'Content-ID: <wonderwish-email-logo>' ) && str_contains( $assembled, 'image/png' );
+$unrelated = new \PHPMailer\PHPMailer\PHPMailer();
+$unrelated->Body = 'Unrelated email';
+wonderwish_embed_email_logo( $unrelated );
+$report['unrelated_email_unchanged'] = 'Unrelated email' === $unrelated->Body && ! $unrelated->getAttachments();
+$report['legacy_sender_normalized'] = 'WonderWish' === apply_filters( 'woocommerce_email_from_name', 'toys store' );
 $again = apply_filters( 'alg_wc_ev_send_mail_message', $verification );
 $report['no_nested_wrapper'] = 1 === substr_count( $again, 'id="template_container"' );
 $original = array( 'to' => 'preview@example.invalid', 'subject' => 'Unchanged subject', 'message' => 'Preview account update', 'headers' => array( 'Reply-To: preview@example.invalid' ), 'attachments' => array() );
