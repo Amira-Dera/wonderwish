@@ -125,3 +125,8 @@ require_once __DIR__ . '/inc/site-consistency.php';
 
 require_once __DIR__ . '/inc/home-editor.php';
 require_once __DIR__ . '/inc/emails.php';
+
+add_action( 'wp_enqueue_scripts', function () {
+ if ( ! is_page( array( 'contact', 'contact-us' ) ) ) return;
+ wp_enqueue_style( 'wonderwish-contact', get_stylesheet_directory_uri() . '/assets/css/contact.css', array(), filemtime( __DIR__ . '/assets/css/contact.css' ) );
+} );

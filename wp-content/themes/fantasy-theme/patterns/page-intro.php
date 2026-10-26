@@ -11,6 +11,7 @@ $intro = '';
 $character = is_cart() ? 'checkout/pooh-cart.png' : ( is_checkout() ? 'checkout/remy-checkout.png' : ( is_404() ? 'states/cheshire-cat.png' : ( is_search() ? 'states/judy-hopps.png' : '' ) ) );
 if ( is_cart() ) { $title = 'Your cart'; $intro = 'Your little treasures, all in one place. Review your gifts before continuing.'; }
 elseif ( is_checkout() ) { $title = is_wc_endpoint_url( 'order-received' ) ? 'Your order' : 'Checkout'; $intro = is_wc_endpoint_url( 'order-received' ) ? '' : 'A few details, then you’re one step closer to your next little treasure.'; }
+elseif ( is_page( array( 'contact', 'contact-us' ) ) ) { $intro = 'Questions, gift ideas, or a little guidance. We’re here to help you find your way.'; $character = 'contact/alice-contact.png'; }
 elseif ( is_404() ) $intro = 'This page has wandered off. Let’s find your way back to something wonderful.';
 elseif ( is_search() ) { $title = 'Search results'; $intro = sprintf( 'Exploring the site for “%s”.', get_search_query() ); }
 ?>
