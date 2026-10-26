@@ -12,6 +12,10 @@ add_action( 'wp_enqueue_scripts', function () {
  wp_enqueue_style( 'wonderwish-toasts', get_stylesheet_directory_uri() . '/assets/css/toasts.css', array(), filemtime( __DIR__ . '/../assets/css/toasts.css' ) );
  wp_enqueue_script( 'wonderwish-toasts', get_stylesheet_directory_uri() . '/assets/js/toasts.js', array( 'jquery' ), filemtime( __DIR__ . '/../assets/js/toasts.js' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
 }, 115 );
+add_action( 'wp_enqueue_scripts', function () {
+ wp_enqueue_script( 'wonderwish-arrow-icons', get_stylesheet_directory_uri() . '/assets/js/arrow-icons.js', array(), filemtime( __DIR__ . '/../assets/js/arrow-icons.js' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
+ wp_enqueue_style( 'wonderwish-arrow-icons', get_stylesheet_directory_uri() . '/assets/css/arrow-icons.css', array(), filemtime( __DIR__ . '/../assets/css/arrow-icons.css' ) );
+}, 116 );
 add_filter( 'document_title_parts', function ( $parts ) {
  $parts['site'] = 'WonderWish';
  unset( $parts['tagline'] );

@@ -9,6 +9,7 @@ Audited against installed WooCommerce **11.2.1**:
 | `myaccount/form-login.php` | 9.9.0 | WonderWish login/registration presentation; native fields, actions and nonces retained |
 | `myaccount/dashboard.php` | 4.4.0 | Welcome artwork, native account shortcuts and real customer-order summary |
 | `myaccount/navigation.php` | 9.3.0 | Existing account cards in place of tabs; native before/after hooks retained |
+| `myaccount/lost-password-confirmation.php` | 3.9.0 | Contained reset-email confirmation card; native notice, message filter and hooks retained |
 
 The theme-only shared card markup is `template-parts/account/cards.php`, loaded with WordPress `get_template_part()`. It is not a WooCommerce override.
 
